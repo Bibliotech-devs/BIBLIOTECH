@@ -1,0 +1,488 @@
+/* ========================================================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ========================================================= */
+
+/*
+    O seletor body controla o corpo inteiro do site.
+*/
+body{
+
+    font-family: "Segoe UI", sans-serif;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(0,200,255,.25),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(0,120,255,.15),
+    transparent 30%),
+
+    #050816;
+
+    min-height: 100vh;
+
+    padding: 40px;
+
+    color: white;
+}
+
+
+
+/* ========================================================= */
+/* CONTAINER PRINCIPAL */
+/* ========================================================= */
+
+/*
+    Centraliza o conteúdo do site.
+*/
+.container {
+
+    /*
+        Limita a largura máxima.
+        Em telas grandes o conteúdo não fica esticado.
+    */
+    max-width: 1100px;
+
+    /*
+        Faz ocupar toda largura disponível
+        em telas pequenas.
+    */
+    width: 90%;
+
+    /*
+        Centraliza horizontalmente.
+    */
+    margin: auto;
+
+    /*
+        Espaçamento interno.
+    */
+    padding: 20px;
+
+}
+
+
+
+/* ========================================================= */
+/* MENU */
+/* ========================================================= */
+
+.menu{
+
+    background: rgba(0, 0, 0, 0);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #00c8ff;
+
+    box-shadow:
+    0 0 15px rgba(0, 0, 0, 0);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    margin-bottom: 30px;
+}
+
+/* Container interno */
+.menu-container{
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+/* Nome Bibliotech */
+.logo-menu h2{
+
+    margin: 0;
+
+    color: #00c8ff;
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+
+    text-shadow: 0 0 10px rgba(0,200,255,.4);
+}
+
+/* Lista */
+.menu-lista{
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 20px;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+/* Links */
+.menu-lista a{
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    transition: .3s;
+}
+
+/* Hover */
+.menu-lista a:hover{
+
+    background: rgba(0,200,255,.15);
+
+    color: #00c8ff;
+}
+
+/* Página atual */
+.menu-lista a.ativo{
+
+    background: #00c8ff;
+
+    color: #08111f;
+
+    font-weight: bold;
+}
+
+
+
+/* ========================================================= */
+/* ÁREA DA LOGO */
+/* ========================================================= */
+
+.logo-area {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+}
+
+
+
+/*
+    Classe exclusiva da logo.
+*/
+.logo{
+
+    width:320px;
+    max-width:100%;
+
+    border-radius:20px;
+
+    border:2px solid #00c8ff;
+
+    box-shadow:
+    0 0 30px rgba(0,200,255,.3);
+
+    transition:.3s;
+}
+
+.logo:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 40px rgba(0,200,255,.5);
+}
+
+
+
+/* ========================================================= */
+/* CARDS */
+/* ========================================================= */
+
+/*
+    Classe reutilizável.
+    Isso é MUITO importante profissionalmente.
+*/
+.card{
+
+    background:rgba(5,15,35,.85);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid #00c8ff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin-top:25px;
+
+    color:white;
+
+    box-shadow:
+    0 0 25px rgba(0,200,255,.15);
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 35px rgba(0,200,255,.3);
+}
+
+
+
+/* ========================================================= */
+/* TÍTULOS */
+/* ========================================================= */
+
+h1{
+
+    color:#00c8ff;
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    text-shadow:
+    0 0 10px rgba(0,200,255,.5);
+}
+
+
+
+h2{
+    color:#00c8ff;
+}
+
+
+/* ========================================================= */
+/* TEXTO */
+/* ========================================================= */
+
+p {
+
+    font-size: 18px;
+
+}
+
+
+
+
+
+
+
+/*
+    Efeito ao passar mouse.
+*/
+.playlist-link:hover {
+
+    color: #000;
+
+}
+
+
+
+/* ========================================================= */
+/* FOOTER */
+/* ========================================================= */
+
+.footer{
+
+    margin-top:60px;
+
+    background:rgba(0, 0, 0, 0);
+
+    border-top:2px solid #00c8ff;
+
+    box-shadow:
+    0 -5px 30px rgba(0, 0, 0, 0);
+
+    color:white;
+}
+
+
+/*
+    Organiza colunas lado a lado.
+*/
+.footer-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/*
+    Cada coluna do footer.
+*/
+.footer-col {
+
+    flex: 1;
+
+    min-width: 250px;
+
+}
+
+
+
+/*
+    Remove bolinhas da lista.
+*/
+.footer-col ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+
+/*
+    Espaçamento entre itens.
+*/
+.footer-col li {
+
+    margin-bottom: 10px;
+
+}
+
+
+
+/*
+    Links do footer.
+*/
+.footer-col a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+
+/*
+    Sublinhado ao passar mouse.
+*/
+.footer-col a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* ========================================================= */
+/* LINHA FINAL DO FOOTER */
+/* ========================================================= */
+
+.footer-bottom {
+
+    margin-top: 20px;
+
+    border-top: 1px solid #444;
+
+    padding-top: 15px;
+
+    text-align: center;
+
+}
+
+
+
+/* ========================================================= */
+/* RESPONSIVIDADE */
+/* ========================================================= */
+
+/*
+    Essas regras ativam
+    apenas em telas menores.
+*/
+@media (max-width: 768px) {
+
+    /*
+        Empilha menu no celular.
+    */
+    .menu-lista {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    /*
+        Footer vira coluna.
+    */
+    .footer-container {
+
+        flex-direction: column;
+
+    }
+
+    /*
+        Diminui tamanho do título.
+    */
+    h1 {
+
+        font-size: 26px;
+
+    }
+
+    h2 {
+
+        font-size: 22px;
+
+    }
+
+    p {
+
+        font-size: 16px;
+
+    }
+
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card,
+.logo-area{
+
+    animation:aparecer .8s ease;
+}
