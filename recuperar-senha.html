@@ -1,0 +1,289 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+        name="description"
+        content="Recupere o acesso à sua conta BiblioTech."
+    >
+
+    <title>Recuperar acesso | BiblioTech</title>
+
+
+    <!-- Estilos globais -->
+
+    <link
+        rel="stylesheet"
+        href="site.css"
+    >
+
+
+    <!-- Estilos exclusivos da recuperação de senha -->
+
+    <link
+        rel="stylesheet"
+        href="recuperar-senha.css"
+    >
+
+
+    <!-- Scripts -->
+
+    <script
+        src="app.js"
+        defer
+    ></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <a
+            class="brand"
+            href="inicio.html"
+            aria-label="Voltar para a página inicial da BiblioTech"
+        >
+
+            <img
+                src="img/96819.png"
+                alt="BiblioTech"
+            >
+
+            <span>
+                BiblioTech
+            </span>
+
+        </a>
+
+
+        <nav
+            class="primary-nav"
+            aria-label="Navegação principal"
+        >
+
+            <a href="inicio.html">
+                Início
+            </a>
+
+            <a href="livros.html">
+                Acervo
+            </a>
+
+            <a href="favoritos.html">
+                Favoritos
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="suporte.html">
+                Ajuda
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="login.html">
+                Entrar
+            </a>
+
+            <a
+                class="button button-small"
+                href="cadastro.html"
+            >
+                Criar conta
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main
+        class="page-shell page recovery-page"
+        aria-labelledby="recovery-title"
+    >
+
+        <section
+            class="recovery-card"
+            aria-label="Recuperação de acesso"
+        >
+
+
+            <!-- ÍCONE -->
+
+            <div
+                class="recovery-icon"
+                aria-hidden="true"
+            >
+                🔐
+            </div>
+
+
+            <!-- CONTEÚDO -->
+
+            <div class="recovery-content">
+
+
+                <p class="eyebrow">
+                    RECUPERAR ACESSO
+                </p>
+
+
+                <h1 id="recovery-title">
+                    Esqueceu sua senha?
+                </h1>
+
+
+                <p class="recovery-description">
+                    Não se preocupe. Informe o e-mail cadastrado
+                    na sua conta e enviaremos as instruções
+                    necessárias para recuperar seu acesso.
+                </p>
+
+
+                <!-- =================================================
+                     FORMULÁRIO
+                ================================================== -->
+
+                <form
+                    class="recovery-form"
+                    data-static-form
+                    data-message="Solicitação simulada. Em produção, um link de recuperação será enviado para o e-mail informado."
+                >
+
+
+                    <div class="recovery-field">
+
+                        <label for="recovery-email">
+                            E-mail cadastrado
+                        </label>
+
+
+                        <div class="recovery-input-wrapper">
+
+                            <span
+                                class="recovery-input-icon"
+                                aria-hidden="true"
+                            >
+                                ✉
+                            </span>
+
+
+                            <input
+                                id="recovery-email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                inputmode="email"
+                                placeholder="voce@escola.edu.br"
+                                required
+                                aria-required="true"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="button recovery-button"
+                    >
+                        Enviar instruções
+                    </button>
+
+
+                    <!-- =================================================
+                         INFORMAÇÃO
+                    ================================================== -->
+
+                    <div
+                        class="recovery-info"
+                        role="note"
+                    >
+
+                        <span
+                            class="recovery-info-icon"
+                            aria-hidden="true"
+                        >
+                            ℹ
+                        </span>
+
+
+                        <p>
+                            Em uma futura integração, você receberá
+                            um link de recuperação no e-mail informado.
+                        </p>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =================================================
+                     VOLTAR PARA LOGIN
+                ================================================== -->
+
+                <div class="recovery-back">
+
+                    <a
+                        class="text-link"
+                        href="login.html"
+                    >
+                        ← Voltar para entrar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <span>
+            © 2026 BiblioTech
+        </span>
+
+        <span>
+            Recupere seu acesso.
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>
+

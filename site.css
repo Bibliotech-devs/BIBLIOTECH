@@ -1,0 +1,971 @@
+
+:root{--ink:#e8f1ff;--muted:#91a4bd;--paper:#071a33;--canvas:#061426;--line:#1c3554;--brand:#3b82f6;--accent:#60a5fa;--shadow:0 12px 32px rgba(0,10,30,.35);font-family:Arial,sans-serif;color:var(--ink);background:var(--paper)}*{box-sizing:border-box}body{margin:0;background:var(--paper);line-height:1.55}a{color:inherit;text-decoration:none}.site-header{min-height:76px;padding:0 clamp(20px,5vw,80px);display:flex;align-items:center;gap:28px;border-bottom:1px solid var(--line);background:rgba(7,26,51,.95);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:9px;font-family:Georgia,serif;font-weight:700;font-size:1.35rem;white-space:nowrap}.brand img{height:34px;width:34px;object-fit:contain}.primary-nav{display:flex;justify-content:center;align-items:center;gap:24px;flex:1}.primary-nav a,.header-actions>a:not(.button){font-size:.93rem;font-weight:600;color:var(--muted);padding:8px 1px;border-bottom:2px solid transparent}.primary-nav a:hover,.primary-nav a.active{color:var(--brand);border-color:var(--brand)}.header-actions{display:flex;align-items:center;gap:16px;white-space:nowrap}.button{display:inline-flex;justify-content:center;align-items:center;background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:7px;padding:12px 20px;font:600 .95rem inherit;cursor:pointer;transition:.2s}.button:hover{background:#2563eb;transform:translateY(-1px)}.button-small{padding:9px 14px;font-size:.88rem}.page-shell{max-width:1180px;margin:auto;padding-left:28px;padding-right:28px}.hero{min-height:590px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:70px}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:700;color:var(--brand);margin:0 0 12px}.hero h1,.page-intro h1{font-family:Georgia,serif;line-height:1.08;letter-spacing:-.04em;margin:0}.hero h1{font-size:clamp(2.8rem,6vw,5.2rem);max-width:650px}.hero h1 em{color:var(--brand);font-style:normal}.lead{font-size:1.08rem;color:var(--muted);max-width:550px;margin:24px 0 30px}.actions{display:flex;align-items:center;gap:22px}.text-link{font-weight:700;color:var(--brand)}.text-link span{font-size:1.3em;margin-left:5px}.hero-art{background:#102d52;min-height:380px;border-radius:44% 56% 52% 48% / 40% 42% 58% 60%;position:relative;display:grid;place-items:center}.hero-art img{width:min(255px,62%);filter:drop-shadow(0 15px 12px rgba(0,0,0,.3))}.floating-card{position:absolute;bottom:26px;left:-25px;width:200px;padding:13px 15px;background:#102642;border-radius:10px;box-shadow:var(--shadow);font-size:.84rem;font-weight:600}.feature-section{padding-top:40px;padding-bottom:88px}.feature-section h2{font:700 clamp(1.8rem,3vw,2.7rem)/1.2 Georgia,serif;margin:0 0 30px}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature-card{border:1px solid var(--line);padding:25px;border-radius:12px;background:#0b2341}.feature-card>span{color:var(--brand);font-size:1.8rem}.feature-card h3{font-size:1.05rem;margin:10px 0 6px}.feature-card p{color:var(--muted);font-size:.93rem;margin:0}.page{padding-top:64px;padding-bottom:80px;min-height:calc(100vh - 145px)}.page-intro{margin-bottom:30px}.page-intro h1{font-size:clamp(2.2rem,4vw,3.7rem)}.page-intro p{margin:12px 0;color:var(--muted)}.catalog-controls{display:flex;gap:14px;margin-bottom:28px}.search{display:flex;align-items:center;gap:9px;padding:0 14px;flex:1;max-width:610px;background:#0b2341;border:1px solid var(--line);border-radius:7px}.search input,select,input,textarea{font:inherit;color:var(--ink);border:0;outline:0;background:transparent}.search input{width:100%;padding:12px 0}select{background:#0b2341;border:1px solid var(--line);padding:0 12px;border-radius:7px}.book-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.book-card{background:#0b2341;border:1px solid var(--line);border-radius:10px;padding:12px;position:relative;transition:.2s}.book-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}.book-cover,.detail-cover{background:linear-gradient(140deg,var(--cover,#174b83),#071a33);color:#fff;display:flex;align-items:flex-end;padding:16px;font:700 1.25rem/1.12 Georgia,serif;letter-spacing:-.02em}.book-cover{height:245px;border-radius:6px}.book-card h2{font-size:1rem;margin:14px 0 2px}.book-card p{font-size:.86rem;color:var(--muted);margin:0}.tag{display:inline-block;color:var(--brand);font-size:.73rem;font-weight:700;margin-top:9px}.favorite{position:absolute;right:21px;top:21px;width:34px;height:34px;border:0;border-radius:50%;background:#102642;color:var(--brand);font-size:1.25rem;cursor:pointer;box-shadow:0 2px 8px #0006}.favorite.saved{color:#60a5fa}.empty{grid-column:1/-1;text-align:center;padding:45px;color:var(--muted);border:1px dashed var(--line);border-radius:10px}.back-link{font-weight:700;color:var(--brand);display:inline-block;margin-bottom:28px}.book-detail{display:grid;grid-template-columns:290px 1fr;gap:50px;max-width:900px}.detail-cover{height:410px;border-radius:10px;font-size:2.2rem}.book-detail h1{font:700 3rem/1.1 Georgia,serif;margin:5px 0}.book-detail .author{color:var(--muted);font-size:1.1rem}.book-detail .description{max-width:550px;margin:25px 0;color:var(--muted)}.form-layout{max-width:550px;background:#0b2341;border:1px solid var(--line);padding:30px;border-radius:12px}.form-layout label{display:block;margin:0 0 17px;font-weight:600;font-size:.9rem}.form-layout input,.form-layout textarea{width:100%;border:1px solid var(--line);border-radius:7px;padding:11px;margin-top:6px}.form-layout textarea{min-height:130px;resize:vertical}.form-note{color:var(--muted);font-size:.88rem}.two-column{display:grid;grid-template-columns:1fr .85fr;gap:60px}.text-content{max-width:720px}.text-content h2{font:700 1.6rem Georgia,serif;margin-top:35px}.text-content p,.text-content li{color:var(--muted)}.settings-list{display:grid;gap:12px}.settings-list label{display:flex;justify-content:space-between;gap:10px;padding:17px;background:#0b2341;border:1px solid var(--line);border-radius:8px;font-weight:600}.notice{padding:13px 16px;background:#102f52;color:#bfdbfe;border-radius:7px;margin:0 0 18px}.site-footer{display:flex;justify-content:space-between;gap:20px;padding:24px clamp(20px,5vw,80px);border-top:1px solid var(--line);font-size:.82rem;color:#91a4bd;background:#041224}body.dark{--ink:#edf5ff;--muted:#9db2cc;--paper:#040e1d;--canvas:#030b18;--line:#203b5e;--brand:#60a5fa;background:var(--paper)}body.dark .site-header,body.dark .feature-card,body.dark .book-card,body.dark .form-layout,body.dark .settings-list label,body.dark .search,body.dark select{background:#081b34}body.dark .floating-card,body.dark .favorite{background:#102642;color:var(--ink)}
+
+@media(max-width:820px){.site-header{padding:13px 20px;flex-wrap:wrap;gap:12px}.primary-nav{order:3;width:100%;justify-content:flex-start;overflow-x:auto;gap:20px;padding-bottom:2px}.header-actions{margin-left:auto}.hero{grid-template-columns:1fr;padding-top:65px;padding-bottom:65px;gap:42px}.hero-art{min-height:260px}.feature-grid,.book-grid{grid-template-columns:repeat(2,1fr)}.two-column,.book-detail{grid-template-columns:1fr}.detail-cover{max-width:290px;height:380px}.catalog-controls{flex-direction:column}.catalog-controls select{height:42px;padding:0 12px}.site-footer{flex-direction:column}.page{padding-top:45px}}
+
+@media(max-width:500px){.brand span{display:none}.header-actions>a:not(.button){display:none}.primary-nav{font-size:.86rem}.page-shell{padding-left:20px;padding-right:20px}.feature-grid,.book-grid{grid-template-columns:1fr}.hero h1{font-size:3rem}.actions{align-items:flex-start;flex-direction:column}.book-cover{height:215px}}
+
+/* Camada visual institucional: profundidade, hierarquia e acabamento consistente. */
+body{background:radial-gradient(circle at 92% 4%,#102f55 0,transparent 25rem),var(--paper)}
+.site-header{backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(96,165,250,.08)}
+.brand:after{content:'BIBLIOTECA DIGITAL';font:700 .52rem Arial,sans-serif;letter-spacing:.13em;color:var(--brand);display:block;margin-top:2px}.brand{display:grid;grid-template-columns:34px auto;column-gap:9px;line-height:1}.brand:after{grid-column:2}.brand img{grid-row:1/3}
+.primary-nav{gap:8px}.primary-nav a{border:0!important;border-radius:6px;padding:8px 11px!important}.primary-nav a:hover,.primary-nav a.active{background:#0d2b4d;color:var(--brand)}
+.hero{position:relative}.hero:before{content:'';position:absolute;width:180px;height:180px;border:1px solid #1d4168;border-radius:50%;right:6%;top:14%;z-index:-1}.hero-art{box-shadow:inset 0 0 0 10px rgba(255,255,255,.05),0 30px 60px rgba(0,12,35,.35);overflow:hidden}.hero-art:before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 48%,rgba(96,165,250,.12));pointer-events:none}.hero-art img{position:relative}.floating-card{border-left:3px solid var(--accent)}
+.feature-section{border-top:1px solid var(--line)}.feature-card{box-shadow:0 8px 22px rgba(0,12,35,.18);border-top:3px solid transparent}.feature-card:hover{border-top-color:var(--accent);transform:translateY(-3px);transition:.2s}.page-intro{max-width:720px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.catalog-controls{padding:12px;background:#081e38;border:1px solid #173555;border-radius:10px}.book-card{box-shadow:0 5px 18px rgba(0,12,35,.18)}.book-cover{position:relative;overflow:hidden}.book-cover:after,.detail-cover:after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.14),transparent 35%)}.book-card h2{font-family:Georgia,serif;font-size:1.1rem}.tag{background:#0d2d4f;padding:3px 8px;border-radius:99px}.book-detail{background:#0b2341;border:1px solid var(--line);padding:24px;border-radius:16px;box-shadow:var(--shadow)}
+.form-layout{box-shadow:0 16px 35px rgba(0,12,35,.25);border-top:3px solid var(--brand)}.form-layout input:focus,.form-layout textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(59,130,246,.15)}.site-footer{background:#041224;color:#dbeafe;border:0}.site-footer span:last-child{color:#91a4bd}body.dark{background:radial-gradient(circle at 92% 4%,#0d2c4d 0,transparent 25rem),var(--paper)}body.dark .primary-nav a:hover,body.dark .primary-nav a.active{background:#102f50}body.dark .book-detail{background:#081b34}
+
+@media(max-width:820px){.brand:after{display:none}.primary-nav{gap:5px}.primary-nav a{padding:7px 9px!important}}
+
+
+/* =========================================================
+   BIBLIOTECH — MODO CLARO
+   Aparência clara e limpa
+========================================================= */
+
+body:not(.dark) {
+    --ink: #172033;
+    --muted: #64748b;
+    --paper: #f5f8fc;
+    --canvas: #ffffff;
+    --line: #d9e2ec;
+    --brand: #2563eb;
+    --accent: #3b82f6;
+
+    background:
+        radial-gradient(
+            circle at 92% 4%,
+            #dbeafe 0,
+            transparent 26rem
+        ),
+        #f5f8fc;
+
+    color: var(--ink);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+body:not(.dark) .site-header {
+    background: rgba(255, 255, 255, .94);
+    border-bottom-color: #dbe3ec;
+    box-shadow: 0 1px 12px rgba(15, 23, 42, .06);
+}
+
+body:not(.dark) .primary-nav a,
+body:not(.dark) .header-actions > a:not(.button) {
+    color: #64748b;
+}
+
+body:not(.dark) .primary-nav a:hover,
+body:not(.dark) .primary-nav a.active {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+
+/* =========================================================
+   CONTEÚDO / CARDS
+========================================================= */
+
+body:not(.dark) .form-layout,
+body:not(.dark) .book-detail,
+body:not(.dark) .config-page .config-section {
+    background: #ffffff;
+    border-color: #dbe3ec;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, .07);
+}
+
+
+/* Cards de configuração */
+
+body:not(.dark) .config-page .setting-card,
+body:not(.dark) .config-page .preference-info {
+    background: #f8fafc;
+    border-color: #dbe3ec;
+}
+
+body:not(.dark) .config-page .setting-card:hover {
+    background: #f1f5f9;
+    border-color: #bfdbfe;
+}
+
+
+/* =========================================================
+   ÍCONES DA CONFIGURAÇÃO
+========================================================= */
+
+body:not(.dark) .config-page .config-icon,
+body:not(.dark) .config-page .section-icon,
+body:not(.dark) .config-page .setting-symbol {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   TEXTOS
+========================================================= */
+
+body:not(.dark) .config-page .section-heading p,
+body:not(.dark) .config-page .setting-card p,
+body:not(.dark) .config-page .config-description,
+body:not(.dark) .config-page .preference-status p {
+    color: #64748b;
+}
+
+body:not(.dark) .config-page .setting-card h3,
+body:not(.dark) .config-page .section-heading h2,
+body:not(.dark) .config-page .reset-content h2 {
+    color: #172033;
+}
+
+
+/* =========================================================
+   ÁREA DE RESTAURAÇÃO
+========================================================= */
+
+body:not(.dark) .config-page .reset-section {
+    background: #f8fafc;
+}
+
+body:not(.dark) .config-page .button-outline {
+    color: #2563eb;
+    border-color: #bfdbfe;
+}
+
+body:not(.dark) .config-page .button-outline:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+}
+
+
+/* =========================================================
+   SWITCHES
+========================================================= */
+
+body:not(.dark) .config-page .slider {
+    background: #cbd5e1;
+    border-color: #b8c4d1;
+}
+
+body:not(.dark) .config-page .slider::before {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, .2);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+body:not(.dark) .site-footer {
+    background: #ffffff;
+    border-top-color: #dbe3ec;
+    color: #64748b;
+}
+
+
+
+/* =========================================================
+   BIBLIOTECH — CORREÇÃO DO MODO CLARO
+   Página inicial
+========================================================= */
+
+body:not(.dark) {
+
+    --ink: #172033;
+    --muted: #64748b;
+    --paper: #f5f8fc;
+    --canvas: #ffffff;
+    --line: #d9e2ec;
+    --brand: #2563eb;
+    --accent: #3b82f6;
+
+    background:
+        radial-gradient(
+            circle at 88% 4%,
+            rgba(59, 130, 246, .12),
+            transparent 27rem
+        ),
+        linear-gradient(
+            180deg,
+            #f8fbff 0%,
+            #f5f8fc 55%,
+            #eef4fa 100%
+        );
+
+    color: var(--ink);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+body:not(.dark) .site-header {
+    background: rgba(255, 255, 255, .94);
+
+    border-bottom: 1px solid #dbe3ec;
+
+    box-shadow:
+        0 4px 20px rgba(15, 23, 42, .06);
+}
+
+body:not(.dark) .brand {
+    color: #172033;
+}
+
+body:not(.dark) .brand:after {
+    color: #2563eb;
+}
+
+body:not(.dark) .primary-nav a,
+body:not(.dark) .header-actions > a:not(.button) {
+    color: #64748b;
+}
+
+body:not(.dark) .primary-nav a:hover {
+    color: #2563eb;
+
+    background: #eff6ff;
+}
+
+body:not(.dark) .primary-nav a.active {
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border-color: #2563eb;
+}
+
+body:not(.dark) .header-actions > a:not(.button):hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+body:not(.dark) .hero::before {
+    border-color: rgba(37, 99, 235, .12);
+}
+
+body:not(.dark) .hero h1 {
+    color: #172033;
+}
+
+body:not(.dark) .hero h1 em {
+    color: #2563eb;
+}
+
+body:not(.dark) .eyebrow {
+    color: #2563eb;
+}
+
+body:not(.dark) .lead {
+    color: #64748b;
+}
+
+body:not(.dark) .text-link {
+    color: #2563eb;
+}
+
+body:not(.dark) .text-link:hover {
+    color: #1d4ed8;
+}
+
+
+/* =========================================================
+   ÁREA DO LOGO
+========================================================= */
+
+body:not(.dark) .hero-art {
+
+    background:
+        radial-gradient(
+            circle at 50% 48%,
+            rgba(59, 130, 246, .18),
+            transparent 52%
+        ),
+        linear-gradient(
+            145deg,
+            #eaf3ff 0%,
+            #dbeafe 100%
+        );
+
+    border: 1px solid #d5e4f5;
+
+    box-shadow:
+        inset 0 0 0 10px rgba(255, 255, 255, .65),
+        0 25px 55px rgba(15, 23, 42, .12);
+}
+
+body:not(.dark) .hero-art::before {
+    background:
+        linear-gradient(
+            135deg,
+            transparent 48%,
+            rgba(37, 99, 235, .10)
+        );
+}
+
+body:not(.dark) .hero-art::after {
+    border-color: rgba(37, 99, 235, .12);
+}
+
+
+/* =========================================================
+   CARTÃO FLUTUANTE
+========================================================= */
+
+body:not(.dark) .floating-card {
+
+    color: #172033;
+
+    background: rgba(255, 255, 255, .97);
+
+    border: 1px solid #dbe3ec;
+
+    border-left: 3px solid #2563eb;
+
+    box-shadow:
+        0 14px 30px rgba(15, 23, 42, .12);
+}
+
+
+/* =========================================================
+   SEÇÃO DE RECURSOS
+========================================================= */
+
+body:not(.dark) .feature-section {
+    border-top-color: #d9e2ec;
+}
+
+body:not(.dark) .feature-section h2 {
+    color: #172033;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+body:not(.dark) .feature-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8fafc 100%
+        );
+
+    border: 1px solid #dbe3ec;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, .07);
+}
+
+body:not(.dark) .feature-card:hover {
+
+    background: #ffffff;
+
+    border-top-color: #2563eb;
+
+    box-shadow:
+        0 16px 32px rgba(15, 23, 42, .11);
+}
+
+body:not(.dark) .feature-card > span {
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+}
+
+body:not(.dark) .feature-card h3 {
+    color: #172033;
+}
+
+body:not(.dark) .feature-card p {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+body:not(.dark) .button {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, .18);
+}
+
+body:not(.dark) .button:hover {
+    background: #1d4ed8;
+
+    border-color: #1d4ed8;
+
+    box-shadow:
+        0 12px 26px rgba(37, 99, 235, .24);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+body:not(.dark) .site-footer {
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    border-top: 1px solid #dbe3ec;
+
+    box-shadow:
+        0 -4px 20px rgba(15, 23, 42, .03);
+}
+
+body:not(.dark) .site-footer span:first-child {
+    color: #475569;
+}
+
+body:not(.dark) .site-footer span:last-child {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   GARANTE QUE A HOME NÃO HERDE CORES ESCURAS
+========================================================= */
+
+body:not(.dark) main {
+    color: #172033;
+}
+
+body:not(.dark) .hero,
+body:not(.dark) .feature-section {
+    color: #172033;
+}
+
+
+/* =========================================================
+   MOBILE — MODO CLARO
+========================================================= */
+
+@media (max-width: 820px) {
+
+    body:not(.dark) .primary-nav {
+        scrollbar-color: #bfdbfe transparent;
+    }
+
+    body:not(.dark) .primary-nav a:hover,
+    body:not(.dark) .primary-nav a.active {
+        background: #eff6ff;
+    }
+}
+
+
+
+
+/* =========================================================
+   BIBLIOTECH — PREFERÊNCIAS GLOBAIS
+   As configurações da página configura.html
+   são aplicadas em todas as páginas.
+========================================================= */
+
+
+/* =========================================================
+   ALTO CONTRASTE
+========================================================= */
+
+body.high-contrast {
+    --line: #6c9ac6;
+}
+
+body.high-contrast .site-header {
+    border-bottom-color: #7da9d4;
+}
+
+body.high-contrast .primary-nav a,
+body.high-contrast .header-actions > a:not(.button) {
+    color: #dcecff;
+}
+
+body.high-contrast .primary-nav a:hover,
+body.high-contrast .primary-nav a.active {
+    color: #ffffff;
+    background: #123b66;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast strong {
+    color: #ffffff;
+}
+
+body.high-contrast p,
+body.high-contrast span,
+body.high-contrast label {
+    color: #e5efff;
+}
+
+body.high-contrast .muted,
+body.high-contrast .lead,
+body.high-contrast .feature-card p,
+body.high-contrast .book-card p,
+body.high-contrast .page-intro p,
+body.high-contrast .text-content p,
+body.high-contrast .text-content li {
+    color: #dcecff;
+}
+
+body.high-contrast .feature-card,
+body.high-contrast .book-card,
+body.high-contrast .form-layout,
+body.high-contrast .book-detail,
+body.high-contrast .search,
+body.high-contrast select {
+    border-color: #6c9ac6;
+}
+
+body.high-contrast .button {
+    background: #2563eb;
+    border-color: #93c5fd;
+    color: #ffffff;
+}
+
+body.high-contrast a {
+    text-decoration-thickness: 2px;
+}
+
+
+/* =========================================================
+   ALTO CONTRASTE — MODO CLARO
+========================================================= */
+
+body:not(.dark).high-contrast {
+    --ink: #0f172a;
+    --muted: #334155;
+    --line: #64748b;
+}
+
+body:not(.dark).high-contrast .site-header {
+    border-bottom-color: #64748b;
+}
+
+body:not(.dark).high-contrast .primary-nav a,
+body:not(.dark).high-contrast .header-actions > a:not(.button) {
+    color: #334155;
+}
+
+body:not(.dark).high-contrast .primary-nav a:hover,
+body:not(.dark).high-contrast .primary-nav a.active {
+    color: #0f172a;
+    background: #dbeafe;
+}
+
+body:not(.dark).high-contrast h1,
+body:not(.dark).high-contrast h2,
+body:not(.dark).high-contrast h3,
+body:not(.dark).high-contrast strong {
+    color: #0f172a;
+}
+
+body:not(.dark).high-contrast p,
+body:not(.dark).high-contrast span,
+body:not(.dark).high-contrast label {
+    color: #334155;
+}
+
+body:not(.dark).high-contrast .feature-card,
+body:not(.dark).high-contrast .book-card,
+body:not(.dark).high-contrast .form-layout,
+body:not(.dark).high-contrast .book-detail,
+body:not(.dark).high-contrast .search,
+body:not(.dark).high-contrast select {
+    border-color: #64748b;
+}
+
+
+/* =========================================================
+   DESTACAR LINKS
+========================================================= */
+
+body.highlight-links a {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+body.highlight-links a:hover {
+    text-decoration-thickness: 3px;
+}
+
+body.highlight-links .button,
+body.highlight-links .brand,
+body.highlight-links .favorite {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   REDUZIR ANIMAÇÕES
+========================================================= */
+
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+}
+
+body.reduce-motion .book-card:hover,
+body.reduce-motion .feature-card:hover,
+body.reduce-motion .button:hover {
+    transform: none !important;
+}
+
+
+/* =========================================================
+   TAMANHO DA FONTE
+   O app.js altera o font-size do <html>.
+   Os elementos que usam rem acompanham automaticamente.
+========================================================= */
+
+html {
+    font-size: 100%;
+}
+
+
+/* =========================================================
+   MODO ESCURO — ELEMENTOS GERAIS
+========================================================= */
+
+body.dark {
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+body.dark .page-intro h1,
+body.dark .hero h1,
+body.dark .feature-section h2,
+body.dark .book-detail h1,
+body.dark .text-content h2 {
+    color: var(--ink);
+}
+
+body.dark .feature-card p,
+body.dark .book-card p,
+body.dark .lead,
+body.dark .page-intro p,
+body.dark .text-content p,
+body.dark .text-content li {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   MODO CLARO — ELEMENTOS GERAIS
+========================================================= */
+
+body:not(.dark) .page-intro h1,
+body:not(.dark) .hero h1,
+body:not(.dark) .feature-section h2,
+body:not(.dark) .book-detail h1,
+body:not(.dark) .text-content h2 {
+    color: #172033;
+}
+
+body:not(.dark) .feature-card p,
+body:not(.dark) .book-card p,
+body:not(.dark) .lead,
+body:not(.dark) .page-intro p,
+body:not(.dark) .text-content p,
+body:not(.dark) .text-content li {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   COMPATIBILIDADE DAS PREFERÊNCIAS COM O MODO ESCURO
+========================================================= */
+
+body.dark.high-contrast {
+    --ink: #ffffff;
+    --muted: #e2e8f0;
+    --line: #7da9d4;
+}
+
+body.dark.high-contrast .feature-card,
+body.dark.high-contrast .book-card,
+body.dark.high-contrast .form-layout,
+body.dark.high-contrast .book-detail,
+body.dark.high-contrast .search,
+body.dark.high-contrast select {
+    border-color: #6c9ac6;
+}
+
+body.dark.high-contrast .feature-card p,
+body.dark.high-contrast .book-card p,
+body.dark.high-contrast .lead,
+body.dark.high-contrast .page-intro p,
+body.dark.high-contrast .text-content p,
+body.dark.high-contrast .text-content li {
+    color: #e2e8f0;
+}
+
+
+/* =========================================================
+   FOCO — ACESSIBILIDADE
+========================================================= */
+
+body.high-contrast :focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+body:not(.dark).high-contrast :focus-visible {
+    outline-color: #1d4ed8;
+}
+
+
+
+```css
+/* =========================================================
+   BIBLIOTECH — PERFIL + PREFERÊNCIAS GLOBAIS
+========================================================= */
+
+/* =========================================================
+   PERFIL
+========================================================= */
+
+.page > .page-intro {
+    margin-bottom: 28px;
+}
+
+.page > .page-intro h1 {
+    margin-bottom: 10px;
+}
+
+.page > .page-intro p:not(.eyebrow) {
+    max-width: 680px;
+}
+
+
+/* Formulário do perfil */
+
+.form-layout {
+    position: relative;
+    overflow: hidden;
+}
+
+.form-layout::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -90px;
+    top: -100px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.08);
+    pointer-events: none;
+}
+
+.form-layout label {
+    position: relative;
+    z-index: 1;
+}
+
+.form-layout input,
+.form-layout textarea {
+    width: 100%;
+}
+
+.form-layout textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-layout .button {
+    position: relative;
+    z-index: 1;
+    margin-top: 4px;
+}
+
+.form-note {
+    position: relative;
+    z-index: 1;
+    margin: 4px 0 0;
+}
+
+.form-note .text-link {
+    color: var(--brand);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MODO CLARO — PERFIL
+========================================================= */
+
+body:not(.dark) .form-layout {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: #d9e2ec;
+    box-shadow: 0 18px 40px rgba(30, 64, 175, 0.08);
+}
+
+body:not(.dark) .form-layout label {
+    color: #172033;
+}
+
+body:not(.dark) .form-layout input,
+body:not(.dark) .form-layout textarea {
+    background: #ffffff;
+    color: #172033;
+    border-color: #cbd5e1;
+}
+
+body:not(.dark) .form-layout input::placeholder,
+body:not(.dark) .form-layout textarea::placeholder {
+    color: #64748b;
+}
+
+body:not(.dark) .form-layout input:focus,
+body:not(.dark) .form-layout textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+
+/* =========================================================
+   MODO ESCURO — PERFIL
+========================================================= */
+
+body.dark .form-layout {
+    background: #081b34;
+    border-color: #203b5e;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+body.dark .form-layout label {
+    color: #edf5ff;
+}
+
+body.dark .form-layout input,
+body.dark .form-layout textarea {
+    background: #061426;
+    color: #edf5ff;
+    border-color: #29486c;
+}
+
+body.dark .form-layout input::placeholder,
+body.dark .form-layout textarea::placeholder {
+    color: #91a4bd;
+}
+
+body.dark .form-layout input:focus,
+body.dark .form-layout textarea:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.14);
+}
+
+
+/* =========================================================
+   ALTO CONTRASTE — PERFIL
+========================================================= */
+
+body.high-contrast .form-layout {
+    border-color: #6c9ac6;
+}
+
+body.high-contrast .form-layout input,
+body.high-contrast .form-layout textarea {
+    border-width: 2px;
+}
+
+body.high-contrast .form-layout input:focus,
+body.high-contrast .form-layout textarea:focus {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   DESTACAR LINKS
+========================================================= */
+
+body.highlight-links .form-note a {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUZIR ANIMAÇÕES
+========================================================= */
+
+body.reduce-motion .form-layout::before {
+    display: none;
+}
+
+body.reduce-motion .form-layout,
+body.reduce-motion .form-layout input,
+body.reduce-motion .form-layout textarea,
+body.reduce-motion .form-layout .button {
+    transition: none !important;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page > .page-intro {
+        margin-bottom: 22px;
+    }
+
+    .form-layout {
+        padding: 20px;
+    }
+
+    .form-layout::before {
+        width: 160px;
+        height: 160px;
+        right: -80px;
+        top: -80px;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .form-layout {
+        padding: 16px;
+    }
+
+    .form-layout textarea {
+        min-height: 130px;
+    }
+
+}
+```

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Crie sua conta na BiblioTech e tenha acesso ao acervo digital."
+    >
+
+    <meta
+        name="theme-color"
+        content="#071a33"
+    >
+
+    <title>Criar conta | BiblioTech</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Ícones -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS exclusivo da página de cadastro -->
+    
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- FUNDO DECORATIVO -->
+    <div class="background-decoration background-decoration-one"></div>
+    <div class="background-decoration background-decoration-two"></div>
+
+
+    <!-- CABEÇALHO -->
+    <header class="site-header">
+
+        <a
+            class="brand"
+            href="inicio.html"
+            aria-label="BiblioTech - Início"
+        >
+
+            <div class="brand-logo">
+                <img
+                    src="../site/img/logo_HD.png"
+                    alt="Logo BiblioTech"
+                >
+            </div>
+
+            <div class="brand-text">
+                <strong>BiblioTech</strong>
+                <span>Biblioteca Digital</span>
+            </div>
+
+        </a>
+
+
+        <nav
+            class="primary-nav"
+            aria-label="Navegação principal"
+        >
+
+            <a href="inicio.html">
+                
+                <span>Início</span>
+            </a>
+
+            <a href="livros.html">
+               
+                <span>Acervo</span>
+            </a>
+
+            <a href="favoritos.html">
+               
+                <span>Favoritos</span>
+            </a>
+
+            <a href="sobre.html">
+                
+                <span>Sobre</span>
+            </a>
+
+            <a href="suporte.html">
+                
+                <span>Ajuda</span>
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a
+                href="login.html"
+                class="login-button"
+            >
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Entrar
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="register-page">
+
+        <section class="register-container">
+
+
+            <!-- LADO ESQUERDO -->
+            <aside class="register-info">
+
+                <div class="info-badge">
+                    <i class="fa-solid fa-book-open"></i>
+                    BiblioTech
+                </div>
+
+
+                <h1>
+                    Seu conhecimento
+                    <span>começa aqui.</span>
+                </h1>
+
+
+                <p>
+                    Crie sua conta e tenha acesso ao universo
+                    de livros, mangás e quadrinhos da nossa
+                    biblioteca digital.
+                </p>
+
+
+                <div class="benefits">
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+
+                        <div>
+                            <strong>Explore o acervo</strong>
+
+                            <span>
+                                Encontre livros, mangás e quadrinhos
+                                com facilidade.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+
+                        <div>
+                            <strong>Salve seus favoritos</strong>
+
+                            <span>
+                                Monte sua própria coleção de
+                                leituras favoritas.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+
+                        <div>
+                            <strong>Área administrativa</strong>
+
+                            <span>
+                                Administradores poderão gerenciar
+                                o conteúdo da biblioteca.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </aside>
+
+
+            <!-- FORMULÁRIO -->
+            <section class="register-card">
+
+
+                <div class="form-header">
+
+                    <div class="form-icon">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+
+                    <div>
+
+                        <p class="eyebrow">
+                            NOVA CONTA
+                        </p>
+
+                        <h2>
+                            Crie sua conta
+                        </h2>
+
+                        <p>
+                            Preencha os dados abaixo para começar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    class="register-form"
+                    data-static-form
+                    data-reset="true"
+                    data-message="Cadastro realizado com sucesso."
+                >
+
+
+                    <!-- NOME -->
+                    <div class="form-group">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                id="nome"
+                                name="nome"
+                                type="text"
+                                required
+                                autocomplete="name"
+                                placeholder="Digite seu nome completo"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                required
+                                autocomplete="email"
+                                placeholder="voce@escola.edu.br"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TIPO DE CONTA -->
+                    <div class="form-group">
+
+                        <label>
+                            Tipo de conta
+                        </label>
+
+
+                        <div class="account-types">
+
+
+                            <label class="account-option">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="usuario"
+                                    checked
+                                >
+
+                                <div class="account-option-content">
+
+                                    <div class="account-option-icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Usuário</strong>
+
+                                        <span>
+                                            Acesso ao acervo e favoritos
+                                        </span>
+                                    </div>
+
+                                    <i class="fa-solid fa-check check-icon"></i>
+
+                                </div>
+
+                            </label>
+
+
+                            <label class="account-option admin-option">
+
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="administrador"
+                                >
+
+                                <div class="account-option-content">
+
+                                    <div class="account-option-icon">
+                                        <i class="fa-solid fa-user-shield"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>Administrador</strong>
+
+                                        <span>
+                                            Gerenciamento da biblioteca
+                                        </span>
+                                    </div>
+
+                                    <i class="fa-solid fa-check check-icon"></i>
+
+                                </div>
+
+                            </label>
+
+
+                        </div>
+
+
+                        <small class="field-info">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            Contas administrativas devem ser
+                            autorizadas pelo sistema.
+
+                        </small>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <div class="form-group">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                id="senha"
+                                name="senha"
+                                type="password"
+                                required
+                                minlength="8"
+                                autocomplete="new-password"
+                                placeholder="Crie uma senha segura"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Mostrar senha"
+                                onclick="togglePassword('senha', this)"
+                            >
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="password-strength">
+
+                            <div class="strength-bars">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                            <small>
+                                Use pelo menos 8 caracteres.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRMAR SENHA -->
+                    <div class="form-group">
+
+                        <label for="confirmar-senha">
+                            Confirmar senha
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                id="confirmar-senha"
+                                name="confirmar_senha"
+                                type="password"
+                                required
+                                minlength="8"
+                                autocomplete="new-password"
+                                placeholder="Digite sua senha novamente"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Mostrar senha"
+                                onclick="togglePassword('confirmar-senha', this)"
+                            >
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMOS -->
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            required
+                        >
+
+                        <span>
+                            Concordo com os
+                            <a href="#">termos de uso</a>
+                            e com a
+                            <a href="#">política de privacidade</a>
+                            da BiblioTech.
+                        </span>
+
+                    </label>
+
+
+                    <!-- BOTÃO -->
+                    <button
+                        class="register-button"
+                        type="submit"
+                    >
+
+                        <span>
+                            Criar minha conta
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <!-- LOGIN -->
+                    <p class="login-note">
+
+                        Já possui uma conta?
+
+                        <a
+                            class="text-link"
+                            href="login.html"
+                        >
+                            Entrar na BiblioTech
+                        </a>
+
+                    </p>
+
+
+                </form>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <strong>BiblioTech</strong>
+
+        </div>
+
+        <span>
+            © 2026 BiblioTech
+        </span>
+
+        <span>
+            Seu espaço de leitura.
+        </span>
+
+    </footer>
+
+
+    <!-- SCRIPT DA PÁGINA -->
+    <script>
+
+        function togglePassword(inputId, button) {
+
+            const input = document.getElementById(inputId);
+            const icon = button.querySelector("i");
+
+            if (!input || !icon) {
+                return;
+            }
+
+            if (input.type === "password") {
+
+                input.type = "text";
+
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+
+                button.setAttribute(
+                    "aria-label",
+                    "Ocultar senha"
+                );
+
+            } else {
+
+                input.type = "password";
+
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+
+                button.setAttribute(
+                    "aria-label",
+                    "Mostrar senha"
+                );
+
+            }
+
+        }
+
+
+        const senha = document.getElementById("senha");
+
+        if (senha) {
+
+            senha.addEventListener("input", function () {
+
+                const bars =
+                    document.querySelectorAll(
+                        ".strength-bars span"
+                    );
+
+                const value = senha.value;
+
+                let strength = 0;
+
+
+                if (value.length >= 8) {
+                    strength++;
+                }
+
+
+                if (/[A-Z]/.test(value)) {
+                    strength++;
+                }
+
+
+                if (/[0-9]/.test(value)) {
+                    strength++;
+                }
+
+
+                if (/[^A-Za-z0-9]/.test(value)) {
+                    strength++;
+                }
+
+
+                bars.forEach((bar, index) => {
+
+                    bar.classList.toggle(
+                        "active",
+                        index < strength
+                    );
+
+                });
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

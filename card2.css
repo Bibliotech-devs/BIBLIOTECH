@@ -1,0 +1,988 @@
+```css
+/* =========================================================
+   BIBLIOTECH
+   CARD2.CSS
+   Página de detalhes dos livros
+
+   Complementa o site.css.
+   Modo claro e escuro.
+========================================================= */
+
+
+/* =========================================================
+   PÁGINA
+========================================================= */
+
+.book-page {
+    padding-top: 34px;
+    padding-bottom: 80px;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+========================================================= */
+
+.book-page > .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 26px;
+
+    color: var(--brand);
+
+    font-size: .9rem;
+    font-weight: 700;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+.book-page > .back-link:hover {
+    color: var(--accent);
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.book-page #book-detail {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL
+========================================================= */
+
+.book-page .book-detail-main {
+    display: grid;
+
+    grid-template-columns:
+        300px minmax(0, 1fr);
+
+    gap: 52px;
+
+    width: 100%;
+
+    padding: 42px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b2341,
+            #071a33
+        );
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 45px rgba(0, 10, 30, .22);
+}
+
+
+/* =========================================================
+   CAPA
+========================================================= */
+
+.book-page .book-detail-main .detail-cover {
+    position: relative;
+
+    width: 300px;
+    height: 450px;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            140deg,
+            var(--cover, #174b83),
+            #071a33
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 22px 45px rgba(0, 0, 0, .32);
+
+    isolation: isolate;
+}
+
+
+/* brilho da capa */
+
+.book-page .detail-cover::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 25% 15%,
+            rgba(255,255,255,.22),
+            transparent 30%
+        );
+
+    pointer-events: none;
+}
+
+
+/* sombra inferior */
+
+.book-page .detail-cover::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.82),
+            rgba(0,0,0,.05) 65%,
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* título na capa */
+
+.book-page .detail-cover span {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 100%;
+
+    color: #ffffff;
+
+    font:
+        700 2rem/1.08 Georgia, serif;
+
+    letter-spacing: -.035em;
+
+    text-shadow:
+        0 2px 12px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.book-page .detail-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   GÊNERO
+========================================================= */
+
+.book-page .detail-genre {
+    display: inline-flex;
+
+    align-self: flex-start;
+
+    padding: 6px 12px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid rgba(96,165,250,.25);
+
+    border-radius: 999px;
+
+    background:
+        rgba(59,130,246,.10);
+
+    color: var(--accent);
+
+    font-size: .68rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.book-page .detail-content h1 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font:
+        700 clamp(2.4rem, 5vw, 4rem)/1.04
+        Georgia, serif;
+
+    letter-spacing: -.045em;
+}
+
+
+/* =========================================================
+   AUTOR
+========================================================= */
+
+.book-page .detail-author {
+    margin: 12px 0 0;
+
+    color: var(--muted);
+
+    font-size: 1rem;
+}
+
+
+.book-page .detail-author strong {
+    color: var(--ink);
+}
+
+
+/* =========================================================
+   AVALIAÇÃO
+========================================================= */
+
+.book-page .detail-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 19px;
+
+    color: var(--muted);
+
+    font-size: .88rem;
+}
+
+
+.book-page .detail-rating strong {
+    color: var(--ink);
+}
+
+
+.book-page .stars {
+    color: #f5c451;
+
+    font-size: .9rem;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
+
+.book-page .detail-description {
+    max-width: 690px;
+
+    margin: 22px 0 0;
+
+    color: var(--muted);
+
+    font-size: .98rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.book-page .detail-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+
+/* botão ler livro */
+
+.book-page .read-book-button {
+    min-height: 46px;
+
+    gap: 9px;
+
+    padding:
+        12px 19px;
+
+    box-shadow:
+        0 8px 20px rgba(59,130,246,.18);
+}
+
+
+.book-page .read-book-button span {
+    font-size: .75rem;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.book-page .read-book-button:hover span {
+    transform: translateX(2px);
+}
+
+
+/* botão favorito */
+
+.book-page .favorite-detail {
+    min-height: 46px;
+
+    padding:
+        11px 18px;
+}
+
+
+.book-page .favorite-detail.saved {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 7px 18px rgba(37,99,235,.2);
+}
+
+
+/* botão secundário */
+
+.book-page .button-secondary {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding:
+        11px 18px;
+
+    background: transparent;
+
+    color: var(--ink);
+
+    border:
+        1px solid var(--line);
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+
+.book-page .button-secondary:hover {
+    background: #102642;
+
+    border-color: var(--brand);
+
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   SEÇÕES INFERIORES
+========================================================= */
+
+.book-page .book-info,
+.book-page .book-synopsis {
+    margin-top: 50px;
+}
+
+
+/* =========================================================
+   CABEÇALHO DAS SEÇÕES
+========================================================= */
+
+.book-page .section-heading {
+    margin-bottom: 19px;
+}
+
+
+.book-page .section-heading span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--brand);
+
+    font-size: .65rem;
+
+    font-weight: 800;
+
+    letter-spacing: .15em;
+}
+
+
+.book-page .section-heading h2 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font:
+        700 1.8rem/1.2
+        Georgia, serif;
+
+    letter-spacing: -.025em;
+}
+
+
+/* =========================================================
+   FICHA TÉCNICA
+========================================================= */
+
+.book-page .info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 13px;
+
+    background: #0b2341;
+
+    box-shadow:
+        0 10px 28px rgba(0,10,30,.08);
+}
+
+
+.book-page .info-item {
+    min-height: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 19px 20px;
+
+    border-right:
+        1px solid var(--line);
+
+    border-bottom:
+        1px solid var(--line);
+
+    transition:
+        background .2s ease;
+}
+
+
+.book-page .info-item:hover {
+    background:
+        rgba(59,130,246,.035);
+}
+
+
+.book-page .info-item:nth-child(4n) {
+    border-right: 0;
+}
+
+
+.book-page .info-item:nth-last-child(-n + 4) {
+    border-bottom: 0;
+}
+
+
+.book-page .info-item span {
+    margin-bottom: 6px;
+
+    color: var(--muted);
+
+    font-size: .7rem;
+
+    font-weight: 600;
+}
+
+
+.book-page .info-item strong {
+    color: var(--ink);
+
+    font-size: .9rem;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   SINOPSE
+========================================================= */
+
+.book-page .book-synopsis {
+    padding: 31px;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 14px;
+
+    background: #0b2341;
+
+    box-shadow:
+        0 10px 28px rgba(0,10,30,.08);
+}
+
+
+.book-page .book-synopsis p {
+    max-width: 900px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: .97rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   MODO CLARO
+========================================================= */
+
+body:not(.dark) .book-page {
+    color: #172033;
+}
+
+
+/* área principal */
+
+body:not(.dark) .book-page .book-detail-main {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7faff
+        );
+
+    border-color:
+        #dbe3ec;
+
+    box-shadow:
+        0 25px 60px rgba(15,23,42,.09),
+        0 5px 18px rgba(15,23,42,.035);
+}
+
+
+/* gênero */
+
+body:not(.dark) .book-page .detail-genre {
+    background: #eff6ff;
+
+    border-color: #bfdbfe;
+
+    color: #2563eb;
+}
+
+
+/* textos */
+
+body:not(.dark) .book-page .detail-content h1,
+body:not(.dark) .book-page .detail-author strong,
+body:not(.dark) .book-page .detail-rating strong,
+body:not(.dark) .book-page .section-heading h2,
+body:not(.dark) .book-page .info-item strong {
+    color: #172033;
+}
+
+
+body:not(.dark) .book-page .detail-author,
+body:not(.dark) .book-page .detail-rating,
+body:not(.dark) .book-page .detail-description,
+body:not(.dark) .book-page .info-item span,
+body:not(.dark) .book-page .book-synopsis p {
+    color: #64748b;
+}
+
+
+/* botão secundário */
+
+body:not(.dark) .book-page .button-secondary {
+    background: #ffffff;
+
+    color: #172033;
+
+    border-color: #d5dee9;
+}
+
+
+body:not(.dark) .book-page .button-secondary:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-color: #3b82f6;
+}
+
+
+/* ficha */
+
+body:not(.dark) .book-page .info-grid {
+    background: #ffffff;
+
+    border-color: #dbe3ec;
+}
+
+
+body:not(.dark) .book-page .info-item {
+    border-color: #dbe3ec;
+}
+
+
+body:not(.dark) .book-page .info-item:hover {
+    background: #f8fbff;
+}
+
+
+/* sinopse */
+
+body:not(.dark) .book-page .book-synopsis {
+    background: #ffffff;
+
+    border-color: #dbe3ec;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.055);
+}
+
+
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+body.dark .book-page .book-detail-main {
+    background:
+        linear-gradient(
+            145deg,
+            #0b2341,
+            #071a33
+        );
+
+    border-color: #203b5e;
+}
+
+
+body.dark .book-page .detail-genre {
+    background:
+        rgba(59,130,246,.10);
+
+    border-color:
+        rgba(96,165,250,.25);
+
+    color: #60a5fa;
+}
+
+
+body.dark .book-page .info-grid {
+    background: #0b2341;
+
+    border-color: #203b5e;
+}
+
+
+body.dark .book-page .info-item {
+    border-color: #203b5e;
+}
+
+
+body.dark .book-page .info-item:hover {
+    background:
+        rgba(96,165,250,.035);
+}
+
+
+body.dark .book-page .book-synopsis {
+    background: #0b2341;
+
+    border-color: #203b5e;
+}
+
+
+body.dark .book-page .button-secondary {
+    color: #e8f1ff;
+
+    border-color: #203b5e;
+}
+
+
+body.dark .book-page .button-secondary:hover {
+    background: #102f50;
+
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   ALTO CONTRASTE
+========================================================= */
+
+body.high-contrast .book-page .book-detail-main,
+body.high-contrast .book-page .info-grid,
+body.high-contrast .book-page .book-synopsis {
+    border-width: 2px;
+}
+
+
+body.high-contrast .book-page .button-secondary {
+    border-width: 2px;
+}
+
+
+/* =========================================================
+   REDUZIR MOVIMENTO
+========================================================= */
+
+body.reduce-motion .book-page *,
+body.reduce-motion .book-page *::before,
+body.reduce-motion .book-page *::after {
+    transition: none !important;
+
+    animation: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .book-page .book-detail-main {
+        grid-template-columns:
+            240px minmax(0, 1fr);
+
+        gap: 30px;
+
+        padding: 30px;
+    }
+
+
+    .book-page .book-detail-main .detail-cover {
+        width: 240px;
+
+        height: 360px;
+    }
+
+
+    .book-page .detail-cover span {
+        font-size: 1.55rem;
+    }
+
+
+    .book-page .info-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .book-page .info-item:nth-child(4n) {
+        border-right:
+            1px solid var(--line);
+    }
+
+
+    .book-page .info-item:nth-child(2n) {
+        border-right: 0;
+    }
+
+
+    .book-page .info-item:nth-last-child(-n + 4) {
+        border-bottom:
+            1px solid var(--line);
+    }
+
+
+    .book-page .info-item:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .book-page {
+        padding-top: 28px;
+
+        padding-bottom: 55px;
+    }
+
+
+    .book-page > .back-link {
+        margin-bottom: 20px;
+    }
+
+
+    .book-page .book-detail-main {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 22px;
+
+        border-radius: 14px;
+    }
+
+
+    .book-page .book-detail-main .detail-cover {
+        width:
+            min(230px, 80vw);
+
+        height: 345px;
+
+        margin: 0 auto;
+    }
+
+
+    .book-page .detail-content h1 {
+        font-size: 2.35rem;
+    }
+
+
+    .book-page .detail-description {
+        font-size: .94rem;
+
+        line-height: 1.7;
+    }
+
+
+    .book-page .detail-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 9px;
+    }
+
+
+    .book-page .detail-actions .button {
+        width: 100%;
+    }
+
+
+    .book-page .read-book-button {
+        min-height: 48px;
+    }
+
+
+    .book-page .info-grid {
+        grid-template-columns: 1fr;
+
+        border-radius: 11px;
+    }
+
+
+    .book-page .info-item,
+    .book-page .info-item:nth-child(2n),
+    .book-page .info-item:nth-child(4n) {
+        border-right: 0;
+
+        border-bottom:
+            1px solid var(--line);
+    }
+
+
+    .book-page .info-item:last-child {
+        border-bottom: 0;
+    }
+
+
+    .book-page .book-info,
+    .book-page .book-synopsis {
+        margin-top: 38px;
+    }
+
+
+    .book-page .book-synopsis {
+        padding:
+            25px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .book-page .book-detail-main {
+        padding: 17px;
+    }
+
+
+    .book-page .book-detail-main .detail-cover {
+        width: 190px;
+
+        height: 285px;
+    }
+
+
+    .book-page .detail-content h1 {
+        font-size: 2rem;
+    }
+
+
+    .book-page .book-synopsis {
+        padding:
+            22px 18px;
+    }
+
+}
+```

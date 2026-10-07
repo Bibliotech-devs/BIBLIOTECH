@@ -1,0 +1,757 @@
+
+/* =========================================================
+   BIBLIOTECH
+   FAVORITOS.CSS
+   Estilo exclusivo da página de favoritos.
+   Corrigido para modo claro e modo escuro.
+========================================================= */
+
+
+/* =========================================================
+   PÁGINA
+========================================================= */
+
+.favorites-page {
+    padding-top: 48px;
+    padding-bottom: 80px;
+}
+
+
+/* =========================================================
+   CABEÇALHO DA PÁGINA
+========================================================= */
+
+.favorites-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 34px 36px;
+    margin-bottom: 48px;
+
+    border: 1px solid var(--line);
+    border-radius: 16px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(59, 130, 246, .16),
+            transparent 260px
+        ),
+        linear-gradient(
+            135deg,
+            #0b2341,
+            #071a33
+        );
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.favorites-hero::after {
+    content: "";
+
+    position: absolute;
+    width: 180px;
+    height: 180px;
+
+    right: -70px;
+    bottom: -90px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(96, 165, 250, .12);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.favorites-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.favorites-icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(59, 130, 246, .12);
+    border: 1px solid rgba(96, 165, 250, .22);
+
+    color: var(--accent);
+
+    font-size: 1.35rem;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .15);
+}
+
+.favorites-heading .eyebrow {
+    margin: 0 0 8px;
+
+    color: var(--brand);
+
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+.favorites-heading h1 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+    line-height: 1.05;
+    letter-spacing: -.035em;
+}
+
+.favorites-intro {
+    max-width: 650px;
+
+    margin: 13px 0 0;
+
+    color: var(--muted);
+
+    font-size: .98rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LINK — EXPLORAR ACERVO
+========================================================= */
+
+.favorites-back {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    flex-shrink: 0;
+
+    padding: 11px 16px;
+
+    border: 1px solid var(--line);
+    border-radius: 8px;
+
+    color: var(--ink);
+    background: rgba(255, 255, 255, .025);
+
+    font-size: .9rem;
+    font-weight: 700;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.favorites-back span {
+    color: var(--brand);
+
+    transition:
+        transform .2s ease;
+}
+
+.favorites-back:hover {
+    color: var(--brand);
+
+    border-color: rgba(59, 130, 246, .45);
+
+    background: rgba(59, 130, 246, .08);
+
+    transform: translateY(-1px);
+}
+
+.favorites-back:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.favorites-content {
+    width: 100%;
+}
+
+.favorites-section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--brand);
+
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+.favorites-section-header h2 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: Georgia, serif;
+
+    font-size: 1.75rem;
+    letter-spacing: -.025em;
+}
+
+.favorites-count {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 30px;
+
+    padding: 5px 11px;
+
+    border: 1px solid var(--line);
+    border-radius: 999px;
+
+    color: var(--muted);
+
+    background: rgba(255, 255, 255, .025);
+
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GRID DOS LIVROS
+========================================================= */
+
+.favorites-page .book-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.favorites-page .book-card {
+    min-width: 0;
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease;
+}
+
+.favorites-page .book-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   LISTA VAZIA
+========================================================= */
+
+.favorites-empty {
+    width: 100%;
+
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+    border: 1px dashed rgba(96, 165, 250, .28);
+    border-radius: 16px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(59, 130, 246, .08),
+            transparent 300px
+        ),
+        rgba(7, 26, 51, .55);
+}
+
+.empty-icon {
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(96, 165, 250, .2);
+
+    background: rgba(59, 130, 246, .08);
+
+    color: var(--accent);
+
+    font-size: 2rem;
+}
+
+.empty-label {
+    margin-bottom: 8px;
+
+    color: var(--brand);
+
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+.favorites-empty h2 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: Georgia, serif;
+
+    font-size: 1.8rem;
+    letter-spacing: -.025em;
+}
+
+.favorites-empty p {
+    max-width: 520px;
+
+    margin: 12px 0 24px;
+
+    color: var(--muted);
+
+    font-size: .95rem;
+    line-height: 1.7;
+}
+
+.favorites-empty .button {
+    gap: 9px;
+}
+
+.favorites-empty .button span {
+    transition: transform .2s ease;
+}
+
+.favorites-empty .button:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   MODO CLARO
+   Aqui forçamos uma aparência realmente clara.
+========================================================= */
+
+body:not(.dark) .favorites-page {
+    color: #17324f;
+}
+
+
+/* HERO */
+
+body:not(.dark) .favorites-hero {
+    border-color: #d5e2ef;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(59, 130, 246, .12),
+            transparent 260px
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f5f9fd 55%,
+            #edf5fc 100%
+        );
+
+    box-shadow:
+        0 14px 35px rgba(20, 55, 90, .10);
+}
+
+body:not(.dark) .favorites-hero::after {
+    border-color: rgba(37, 99, 235, .12);
+}
+
+
+/* ÍCONE */
+
+body:not(.dark) .favorites-icon {
+    background: #edf5ff;
+
+    border-color: #cfe2f8;
+
+    color: #2563eb;
+
+    box-shadow:
+        0 8px 22px rgba(37, 99, 235, .08);
+}
+
+
+/* TEXTOS */
+
+body:not(.dark) .favorites-heading h1,
+body:not(.dark) .favorites-section-header h2,
+body:not(.dark) .favorites-empty h2 {
+    color: #102a43;
+}
+
+body:not(.dark) .favorites-intro,
+body:not(.dark) .favorites-empty p {
+    color: #64748b;
+}
+
+body:not(.dark) .favorites-heading .eyebrow,
+body:not(.dark) .section-label,
+body:not(.dark) .empty-label {
+    color: #2563eb;
+}
+
+
+/* LINK */
+
+body:not(.dark) .favorites-back {
+    background: #ffffff;
+
+    color: #17324f;
+
+    border-color: #cddceb;
+
+    box-shadow:
+        0 4px 12px rgba(20, 55, 90, .05);
+}
+
+body:not(.dark) .favorites-back:hover {
+    background: #edf5ff;
+
+    border-color: #93b9e5;
+
+    color: #1d4ed8;
+}
+
+
+/* CONTADOR */
+
+body:not(.dark) .favorites-count {
+    background: #ffffff;
+
+    border-color: #d6e2ef;
+
+    color: #64748b;
+}
+
+
+/* LINHA DO CABEÇALHO */
+
+body:not(.dark) .favorites-section-header {
+    border-bottom-color: #dce6f0;
+}
+
+
+/* ESTADO VAZIO */
+
+body:not(.dark) .favorites-empty {
+    border-color: #c9d9ea;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(59, 130, 246, .07),
+            transparent 300px
+        ),
+        #ffffff;
+
+    box-shadow:
+        0 12px 30px rgba(20, 55, 90, .07);
+}
+
+body:not(.dark) .empty-icon {
+    background: #f0f6fd;
+
+    border-color: #d2e2f3;
+
+    color: #3b82f6;
+}
+
+
+/* =========================================================
+   AJUSTE DOS CARDS NO MODO CLARO
+   Evita que o card continue parecendo escuro.
+========================================================= */
+
+body:not(.dark) .favorites-page .book-card {
+    background: #ffffff;
+
+    border-color: #d7e3ee;
+
+    box-shadow:
+        0 8px 24px rgba(20, 55, 90, .08);
+}
+
+body:not(.dark) .favorites-page .book-card h2 {
+    color: #102a43;
+}
+
+body:not(.dark) .favorites-page .book-card p {
+    color: #64748b;
+}
+
+body:not(.dark) .favorites-page .book-card .tag {
+    background: #edf5ff;
+
+    border-color: #d4e5f7;
+
+    color: #2563eb;
+}
+
+body:not(.dark) .favorites-page .book-card:hover {
+    box-shadow:
+        0 14px 32px rgba(20, 55, 90, .12);
+}
+
+
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+body.dark .favorites-hero {
+    border-color: #203b5e;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(96, 165, 250, .14),
+            transparent 260px
+        ),
+        linear-gradient(
+            135deg,
+            #081b34,
+            #050f1e
+        );
+}
+
+body.dark .favorites-empty {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(96, 165, 250, .08),
+            transparent 300px
+        ),
+        #071a33;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+body.high-contrast .favorites-hero,
+body.high-contrast .favorites-empty {
+    border-width: 2px;
+}
+
+body.high-contrast .favorites-back,
+body.high-contrast .favorites-count {
+    border-width: 2px;
+}
+
+body.highlight-links .favorites-page a {
+    text-decoration: underline;
+}
+
+body.highlight-links .favorites-page .button {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+body.reduce-motion .favorites-back,
+body.reduce-motion .favorites-back span,
+body.reduce-motion .favorites-page .book-card,
+body.reduce-motion .favorites-empty .button span {
+    transition: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .favorites-page {
+        padding-top: 38px;
+    }
+
+    .favorites-hero {
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 30px;
+    }
+
+    .favorites-back {
+        margin-left: 72px;
+    }
+
+    .favorites-page .book-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .favorites-page {
+        padding-top: 28px;
+        padding-bottom: 55px;
+    }
+
+    .favorites-hero {
+        padding: 24px 20px;
+
+        margin-bottom: 34px;
+
+        border-radius: 13px;
+    }
+
+    .favorites-heading {
+        gap: 14px;
+    }
+
+    .favorites-icon {
+        width: 44px;
+        height: 44px;
+
+        flex-basis: 44px;
+
+        border-radius: 11px;
+
+        font-size: 1.1rem;
+    }
+
+    .favorites-heading h1 {
+        font-size: 2.15rem;
+    }
+
+    .favorites-intro {
+        font-size: .9rem;
+        line-height: 1.6;
+    }
+
+    .favorites-back {
+        margin-left: 58px;
+    }
+
+    .favorites-section-header {
+        align-items: center;
+    }
+
+    .favorites-section-header h2 {
+        font-size: 1.45rem;
+    }
+
+    .favorites-page .book-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .favorites-empty {
+        min-height: 350px;
+
+        padding: 40px 20px;
+    }
+
+    .favorites-empty h2 {
+        font-size: 1.5rem;
+    }
+
+    .favorites-empty p {
+        font-size: .9rem;
+    }
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .favorites-heading {
+        flex-direction: column;
+    }
+
+    .favorites-back {
+        margin-left: 0;
+    }
+
+    .favorites-heading h1 {
+        font-size: 2rem;
+    }
+
+    .favorites-section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+

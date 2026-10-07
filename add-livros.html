@@ -1,0 +1,473 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Adicionar livros | BiblioTech</title>
+
+    <link
+        rel="stylesheet"
+        href="site.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="add-livros.css"
+    >
+
+    <script
+        src="app.js"
+        defer
+    ></script>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <a
+            class="brand"
+            href="inicio.html"
+        >
+
+            <img
+                src="../site/img/logo_HD.png"
+                alt="BiblioTech"
+            >
+
+            <span>
+                BiblioTech
+            </span>
+
+        </a>
+
+
+        <nav
+            class="primary-nav"
+            aria-label="Navegação principal"
+        >
+
+            <a href="inicio.html">
+                Início
+            </a>
+
+            <a href="livros.html">
+                Acervo
+            </a>
+
+            <a href="favoritos.html">
+                Favoritos
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="suporte.html">
+                Ajuda
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="login.html">
+                Sair
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="page-shell page admin-books-page">
+
+
+        <!-- =================================================
+             CABEÇALHO DO PAINEL
+        ================================================== -->
+
+        <section class="admin-books-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    PAINEL ADMINISTRATIVO
+                </p>
+
+                <h1>
+                    Adicionar livros
+                </h1>
+
+                <p>
+                    Cadastre novas obras para disponibilizá-las
+                    no acervo da BiblioTech.
+                </p>
+
+            </div>
+
+
+            <div class="admin-books-badge">
+
+                <span aria-hidden="true">
+                    ⚙
+                </span>
+
+                <div>
+
+                    <strong>
+                        Área do administrador
+                    </strong>
+
+                    <small>
+                        Gerenciamento do acervo
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FORMULÁRIO
+        ================================================== -->
+
+        <section class="admin-books-card">
+
+            <div class="admin-books-card-header">
+
+                <div>
+
+                    <span
+                        class="admin-books-card-icon"
+                        aria-hidden="true"
+                    >
+                        +
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Novo livro
+                    </h2>
+
+                    <p>
+                        Preencha as informações da obra.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form class="admin-books-form">
+
+
+                <!-- TÍTULO -->
+
+                <div class="admin-books-field admin-books-field-full">
+
+                    <label for="book-title">
+                        Título do livro
+                    </label>
+
+                    <input
+                        id="book-title"
+                        type="text"
+                        placeholder="Ex.: O Pequeno Príncipe"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- AUTOR -->
+
+                <div class="admin-books-field">
+
+                    <label for="book-author">
+                        Autor
+                    </label>
+
+                    <input
+                        id="book-author"
+                        type="text"
+                        placeholder="Nome do autor"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- GÊNERO -->
+
+                <div class="admin-books-field">
+
+                    <label for="book-genre">
+                        Gênero
+                    </label>
+
+                    <select id="book-genre">
+
+                        <option value="">
+                            Selecione um gênero
+                        </option>
+
+                        <option value="acao">
+                            Ação
+                        </option>
+
+                        <option value="aventura">
+                            Aventura
+                        </option>
+
+                        <option value="comedia">
+                            Comédia
+                        </option>
+
+                        <option value="drama">
+                            Drama
+                        </option>
+
+                        <option value="fantasia">
+                            Fantasia
+                        </option>
+
+                        <option value="ficcao">
+                            Ficção
+                        </option>
+
+                        <option value="romance">
+                            Romance
+                        </option>
+
+                        <option value="terror">
+                            Terror
+                        </option>
+
+                        <option value="manga">
+                            Mangá
+                        </option>
+
+                        <option value="quadrinhos">
+                            Quadrinhos
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TIPO -->
+
+                <div class="admin-books-field">
+
+                    <label for="book-type">
+                        Tipo de obra
+                    </label>
+
+                    <select id="book-type">
+
+                        <option value="">
+                            Selecione o tipo
+                        </option>
+
+                        <option value="livro">
+                            Livro
+                        </option>
+
+                        <option value="manga">
+                            Mangá
+                        </option>
+
+                        <option value="quadrinho">
+                            Quadrinho
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ANO -->
+
+                <div class="admin-books-field">
+
+                    <label for="book-year">
+                        Ano de publicação
+                    </label>
+
+                    <input
+                        id="book-year"
+                        type="number"
+                        min="0"
+                        max="2100"
+                        placeholder="Ex.: 2026"
+                    >
+
+                </div>
+
+
+                <!-- CAPA -->
+
+                <div class="admin-books-field admin-books-field-full">
+
+                    <label for="book-cover">
+                        Capa do livro
+                    </label>
+
+                    <div class="admin-books-file">
+
+                        <input
+                            id="book-cover"
+                            type="file"
+                            accept="image/png,image/jpeg,image/webp"
+                        >
+
+                        <label
+                            for="book-cover"
+                            class="admin-books-file-label"
+                        >
+
+                            <span
+                                class="admin-books-upload-icon"
+                                aria-hidden="true"
+                            >
+                                ↑
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Selecionar capa
+                                </strong>
+
+                                <small>
+                                    PNG, JPG ou WEBP
+                                </small>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <div class="admin-books-field admin-books-field-full">
+
+                    <label for="book-description">
+                        Sinopse / descrição
+                    </label>
+
+                    <textarea
+                        id="book-description"
+                        rows="6"
+                        placeholder="Escreva uma breve descrição sobre a obra..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- AÇÕES -->
+
+                <div class="admin-books-actions">
+
+                    <button
+                        type="reset"
+                        class="admin-books-secondary"
+                    >
+                        Limpar campos
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="button admin-books-submit"
+                    >
+                        Adicionar ao acervo
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- =================================================
+             AVISO
+        ================================================== -->
+
+        <section class="admin-books-notice">
+
+            <span
+                class="admin-books-notice-icon"
+                aria-hidden="true"
+            >
+                ℹ
+            </span>
+
+            <div>
+
+                <strong>
+                    Sobre este cadastro
+                </strong>
+
+                <p>
+                    Esta é a interface de cadastro do painel
+                    administrativo. A conexão com o banco de dados
+                    será adicionada posteriormente.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <span>
+            © 2026 BiblioTech
+        </span>
+
+        <span>
+            Painel administrativo
+        </span>
+
+    </footer>
+
+</body>
+
+</html>
+

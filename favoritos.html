@@ -1,0 +1,168 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Veja os livros que você salvou como favoritos na BiblioTech."
+    >
+
+    <title>Favoritos | BiblioTech</title>
+
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="favoritos.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a class="brand" href="inicio.html" aria-label="BiblioTech - Página inicial">
+        <img src="../site/img/logo_HD.png" alt="Logo BiblioTech">
+        <span>BiblioTech</span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="inicio.html">Início</a>
+        <a href="livros.html">Acervo</a>
+        <a class="active" href="favoritos.html">Favoritos</a>
+          <a href="perfil.html">Perfil</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="suporte.html">Ajuda</a>
+    </nav>
+
+    <div class="header-actions">
+        <a href="login.html">Entrar</a>
+        <a class="button button-small" href="cadastro.html">
+            Criar conta
+        </a>
+    </div>
+
+</header>
+
+
+<main class="page-shell page favorites-page">
+
+    <section class="favorites-hero" aria-labelledby="favorites-title">
+
+        <div class="favorites-heading">
+
+            <div class="favorites-icon" aria-hidden="true">
+                ♥
+            </div>
+
+            <div>
+                <p class="eyebrow">SUA LISTA</p>
+
+                <h1 id="favorites-title">
+                    Livros favoritos
+                </h1>
+
+                <p class="favorites-intro">
+                    Os títulos que você marcou como favoritos ficam
+                    guardados neste navegador para você encontrar
+                    facilmente depois.
+                </p>
+            </div>
+
+        </div>
+
+        <a class="favorites-back" href="livros.html">
+            Explorar acervo
+            <span aria-hidden="true">→</span>
+        </a>
+
+    </section>
+
+
+    <section class="favorites-content" aria-label="Lista de livros favoritos">
+
+        <div class="favorites-section-header">
+            <div>
+                <span class="section-label">MINHA BIBLIOTECA</span>
+                <h2>Seus favoritos</h2>
+            </div>
+
+            <span class="favorites-count" id="favorites-count">
+                0 livros
+            </span>
+        </div>
+
+        <div id="book-grid" class="book-grid"></div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <span>© 2026 BiblioTech</span>
+    <span>Leituras para lembrar.</span>
+</footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const grid = document.querySelector('#book-grid');
+    const count = document.querySelector('#favorites-count');
+
+    const favorites = getFavorites();
+
+    const favoriteBooks = books.filter(book =>
+        favorites.includes(book.id)
+    );
+
+    count.textContent =
+        `${favoriteBooks.length} ${favoriteBooks.length === 1 ? 'livro' : 'livros'}`;
+
+    if (favoriteBooks.length) {
+
+        grid.innerHTML = favoriteBooks
+            .map(card)
+            .join('');
+
+    } else {
+
+        grid.innerHTML = `
+            <div class="favorites-empty">
+
+                <div class="empty-icon" aria-hidden="true">
+                    ♡
+                </div>
+
+                <span class="empty-label">
+                    SUA LISTA ESTÁ VAZIA
+                </span>
+
+                <h2>
+                    Nenhum favorito por enquanto
+                </h2>
+
+                <p>
+                    Quando encontrar um livro que você gostar,
+                    clique no botão de favorito para adicioná-lo
+                    à sua lista.
+                </p>
+
+                <a class="button button-primary" href="livros.html">
+                    Explorar acervo
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+        `;
+    }
+
+});
+</script>
+
+</body>
+</html>
+

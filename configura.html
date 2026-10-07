@@ -1,0 +1,379 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Configurações | BiblioTech</title>
+
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="configura.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a class="brand" href="inicio.html">
+        <img src="../site/img/logo_HD.png" alt="">
+        <span>BiblioTech</span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="inicio.html">Início</a>
+        <a href="livros.html">Acervo</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="suporte.html">Ajuda</a>
+    </nav>
+
+    <div class="header-actions">
+        <a href="perfil.html">Perfil</a>
+        <a class="button button-small" href="cadastro.html">Criar conta</a>
+    </div>
+
+</header>
+
+
+<main class="page-shell page config-page">
+
+    <div class="config-header">
+
+        <div>
+            <p class="eyebrow">PERSONALIZAÇÃO</p>
+
+            <h1>Configurações</h1>
+
+            <p class="config-description">
+                Personalize sua experiência no BiblioTech
+                e deixe a leitura mais confortável para você.
+            </p>
+        </div>
+
+        <div class="config-icon" aria-hidden="true">
+            ⚙
+        </div>
+
+    </div>
+
+
+    <div class="config-layout">
+
+
+        <!-- ACESSIBILIDADE -->
+
+        <section class="config-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">
+                    ◐
+                </div>
+
+                <div>
+                    <h2>Acessibilidade</h2>
+
+                    <p>
+                        Ajuste a aparência do site para facilitar
+                        sua navegação e leitura.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="settings-list">
+
+
+                <!-- MODO ESCURO -->
+
+                <div class="setting-card">
+
+                    <div class="setting-info">
+
+                        <div class="setting-symbol">
+                            ☾
+                        </div>
+
+                        <div>
+                            <h3>Modo escuro</h3>
+
+                            <p>
+                                Reduz o brilho da tela e utiliza
+                                uma aparência mais escura.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            id="dark-mode"
+                            type="checkbox"
+                            role="switch"
+                            aria-label="Ativar modo escuro"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- TAMANHO DA FONTE -->
+
+                <div class="setting-card">
+
+                    <div class="setting-info">
+
+                        <div class="setting-symbol">
+                            A
+                        </div>
+
+                        <div>
+                            <h3>Tamanho da fonte</h3>
+
+                            <p>
+                                Aumente ou diminua o tamanho
+                                dos textos do site.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="font-control">
+
+                        <span id="font-size-value">100%</span>
+
+                        <input
+                            id="font-size"
+                            type="range"
+                            min="85"
+                            max="120"
+                            step="5"
+                            value="100"
+                            aria-label="Tamanho da fonte"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ALTO CONTRASTE -->
+
+                <div class="setting-card">
+
+                    <div class="setting-info">
+
+                        <div class="setting-symbol">
+                            ◑
+                        </div>
+
+                        <div>
+                            <h3>Alto contraste</h3>
+
+                            <p>
+                                Aumenta o contraste entre textos,
+                                fundos e elementos da interface.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            id="high-contrast"
+                            type="checkbox"
+                            role="switch"
+                            aria-label="Ativar alto contraste"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- REDUZIR ANIMAÇÕES -->
+
+                <div class="setting-card">
+
+                    <div class="setting-info">
+
+                        <div class="setting-symbol">
+                            ⏸
+                        </div>
+
+                        <div>
+                            <h3>Reduzir animações</h3>
+
+                            <p>
+                                Diminui efeitos de movimento e
+                                transições da interface.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            id="reduce-motion"
+                            type="checkbox"
+                            role="switch"
+                            aria-label="Reduzir animações"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- DESTACAR LINKS -->
+
+                <div class="setting-card">
+
+                    <div class="setting-info">
+
+                        <div class="setting-symbol">
+                            🔗
+                        </div>
+
+                        <div>
+                            <h3>Destacar links</h3>
+
+                            <p>
+                                Adiciona destaque visual aos links
+                                para facilitar sua identificação.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            id="highlight-links"
+                            type="checkbox"
+                            role="switch"
+                            aria-label="Destacar links"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREFERÊNCIAS -->
+
+        <section class="config-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">
+                    ⚙
+                </div>
+
+                <div>
+                    <h2>Preferências</h2>
+
+                    <p>
+                        Suas escolhas ficam salvas neste navegador.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="preference-info">
+
+                <div class="preference-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <strong>Preferências salvas automaticamente</strong>
+
+                        <p>
+                            As alterações são aplicadas imediatamente
+                            e armazenadas neste dispositivo.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESTAURAR -->
+
+        <section class="config-section reset-section">
+
+            <div class="reset-content">
+
+                <div>
+
+                    <h2>Restaurar configurações</h2>
+
+                    <p>
+                        Volte todas as preferências para os valores
+                        originais do BiblioTech.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="reset-settings"
+                    class="button button-outline"
+                >
+                    Restaurar padrão
+                </button>
+
+            </div>
+
+            <p
+                id="settings-notice"
+                class="settings-notice"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <span>© 2026 BiblioTech</span>
+
+    <span>Leitura confortável para todos.</span>
+
+</footer>
+
+</body>
+</html>
+

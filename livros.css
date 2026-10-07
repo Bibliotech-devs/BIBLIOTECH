@@ -1,0 +1,771 @@
+/* =========================================================
+BIBLIOTECH — LIVROS.CSS
+CSS EXCLUSIVO DA PÁGINA DO ACERVO
+
+Importante:
+
+* Não altera header, menu, footer ou botões globais.
+* Não cria regras globais para .book-card, .search etc.
+* Tudo fica limitado a .catalog-page.
+  ========================================================= */
+
+/* =========================================================
+ACESSIBILIDADE
+========================================================= */
+
+.catalog-page .sr-only {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border: 0;
+}
+
+/* =========================================================
+PÁGINA DO ACERVO
+========================================================= */
+
+.catalog-page {
+width: 100%;
+}
+
+/* =========================================================
+INTRODUÇÃO
+========================================================= */
+
+.catalog-page .page-intro {
+position: relative;
+padding-top: 54px;
+padding-bottom: 34px;
+}
+
+.catalog-page .page-intro::after {
+content: "";
+display: block;
+width: 64px;
+height: 3px;
+margin-top: 24px;
+border-radius: 999px;
+background: var(--brand);
+}
+
+.catalog-page .eyebrow {
+margin: 0 0 10px;
+
+
+color: var(--brand);
+
+font-size: .76rem;
+font-weight: 800;
+
+letter-spacing: .14em;
+text-transform: uppercase;
+
+
+}
+
+.catalog-page .page-intro h1 {
+margin: 0;
+
+
+color: var(--ink);
+
+font-family: Georgia, serif;
+font-size: clamp(2rem, 4vw, 3.2rem);
+line-height: 1.08;
+letter-spacing: -.035em;
+
+
+}
+
+.catalog-page .page-intro > p:last-child {
+max-width: 650px;
+margin: 16px 0 0;
+
+
+color: var(--muted);
+font-size: 1rem;
+
+
+}
+
+/* =========================================================
+BUSCA E FILTRO
+========================================================= */
+
+.catalog-page .catalog-controls {
+display: grid;
+grid-template-columns: minmax(0, 1fr) 230px;
+gap: 12px;
+
+
+margin-bottom: 38px;
+padding: 12px;
+
+background: #081e38;
+border: 1px solid #173555;
+border-radius: 12px;
+
+
+}
+
+/* Campo de busca */
+
+.catalog-page .search {
+display: flex;
+align-items: center;
+gap: 10px;
+
+
+min-width: 0;
+height: 48px;
+
+padding: 0 14px;
+
+background: #071a33;
+border: 1px solid var(--line);
+border-radius: 8px;
+
+transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+
+
+}
+
+.catalog-page .search span {
+flex: 0 0 auto;
+
+
+color: var(--muted);
+
+font-size: 1.35rem;
+line-height: 1;
+
+
+}
+
+.catalog-page .search input {
+width: 100%;
+min-width: 0;
+
+
+padding: 0;
+
+color: var(--ink);
+
+background: transparent;
+border: 0;
+outline: 0;
+
+font: inherit;
+
+
+}
+
+.catalog-page .search input::placeholder {
+color: var(--muted);
+}
+
+.catalog-page .search:hover {
+border-color: #31577e;
+}
+
+.catalog-page .search:focus-within {
+border-color: var(--brand);
+box-shadow: 0 0 0 3px rgba(59, 130, 246, .12);
+}
+
+/* Filtro */
+
+.catalog-page .catalog-filter {
+display: block;
+min-width: 0;
+}
+
+.catalog-page #genre-filter {
+width: 100%;
+height: 48px;
+
+
+padding: 0 14px;
+
+color: var(--ink);
+
+background: #071a33;
+border: 1px solid var(--line);
+border-radius: 8px;
+
+outline: 0;
+
+font: inherit;
+cursor: pointer;
+
+transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+
+
+}
+
+.catalog-page #genre-filter:hover {
+border-color: #31577e;
+}
+
+.catalog-page #genre-filter:focus {
+border-color: var(--brand);
+box-shadow: 0 0 0 3px rgba(59, 130, 246, .12);
+}
+
+/* =========================================================
+RESULTADOS
+========================================================= */
+
+.catalog-page .catalog-results {
+padding-bottom: 60px;
+}
+
+.catalog-page .catalog-results-header {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+
+
+margin-bottom: 22px;
+
+
+}
+
+.catalog-page .section-label {
+display: block;
+
+
+margin-bottom: 5px;
+
+color: var(--brand);
+
+font-size: .72rem;
+font-weight: 800;
+
+letter-spacing: .12em;
+text-transform: uppercase;
+
+
+}
+
+.catalog-page .catalog-results-header h2 {
+margin: 0;
+
+
+color: var(--ink);
+
+font-family: Georgia, serif;
+font-size: 1.65rem;
+line-height: 1.15;
+
+
+}
+
+/* =========================================================
+GRID DOS LIVROS
+========================================================= */
+
+.catalog-page .book-grid {
+display: grid;
+
+
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 20px;
+
+
+}
+
+/* =========================================================
+CARD DO LIVRO
+========================================================= */
+
+.catalog-page .book-card {
+position: relative;
+
+
+min-width: 0;
+
+padding: 12px;
+
+background: #0b2341;
+border: 1px solid var(--line);
+border-radius: 12px;
+
+box-shadow: 0 5px 18px rgba(0, 12, 35, .18);
+
+transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+
+
+}
+
+.catalog-page .book-card:hover {
+transform: translateY(-4px);
+
+
+border-color: #31577e;
+
+box-shadow:
+    0 14px 30px rgba(0, 12, 35, .28);
+
+
+}
+
+/* Link que envolve o conteúdo */
+
+.catalog-page .book-card > a {
+display: block;
+
+
+min-width: 0;
+
+color: inherit;
+
+
+}
+
+/* =========================================================
+CAPA
+========================================================= */
+
+.catalog-page .book-cover {
+position: relative;
+
+
+display: flex;
+align-items: flex-end;
+
+height: 245px;
+
+overflow: hidden;
+
+padding: 16px;
+
+color: #fff;
+
+background:
+    linear-gradient(
+        140deg,
+        var(--cover, #174b83),
+        #071a33
+    );
+
+border-radius: 7px;
+
+font-family: Georgia, serif;
+font-size: 1.25rem;
+font-weight: 700;
+line-height: 1.12;
+letter-spacing: -.02em;
+
+isolation: isolate;
+
+
+}
+
+.catalog-page .book-cover::before {
+content: "";
+
+
+position: absolute;
+inset: 0;
+
+background:
+    linear-gradient(
+        to top,
+        rgba(0, 0, 0, .48),
+        transparent 58%
+    );
+
+z-index: -1;
+
+
+}
+
+.catalog-page .book-cover::after {
+content: "";
+
+
+position: absolute;
+inset: 0;
+
+background:
+    linear-gradient(
+        115deg,
+        rgba(255, 255, 255, .14),
+        transparent 35%
+    );
+
+pointer-events: none;
+
+
+}
+
+/* =========================================================
+INFORMAÇÕES DO LIVRO
+========================================================= */
+
+.catalog-page .book-card h2 {
+margin: 14px 0 3px;
+
+
+overflow: hidden;
+
+color: var(--ink);
+
+font-family: Georgia, serif;
+font-size: 1.08rem;
+line-height: 1.25;
+
+text-overflow: ellipsis;
+white-space: nowrap;
+
+
+}
+
+.catalog-page .book-card > a > p {
+margin: 0;
+
+
+overflow: hidden;
+
+color: var(--muted);
+
+font-size: .86rem;
+
+text-overflow: ellipsis;
+white-space: nowrap;
+
+
+}
+
+/* =========================================================
+CATEGORIA
+========================================================= */
+
+.catalog-page .tag {
+display: inline-block;
+
+
+margin-top: 10px;
+padding: 4px 9px;
+
+color: var(--brand);
+
+background: #0d2d4f;
+
+border-radius: 999px;
+
+font-size: .7rem;
+font-weight: 800;
+
+
+
+}
+
+/* =========================================================
+FAVORITOS
+========================================================= */
+
+.catalog-page .favorite {
+position: absolute;
+top: 21px;
+right: 21px;
+z-index: 2;
+
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 34px;
+height: 34px;
+
+padding: 0;
+
+color: var(--brand);
+
+background: #102642;
+border: 1px solid rgba(255, 255, 255, .08);
+border-radius: 50%;
+
+box-shadow: 0 3px 10px rgba(0, 0, 0, .28);
+
+font-size: 1.25rem;
+line-height: 1;
+
+cursor: pointer;
+
+transition:
+    transform .18s ease,
+    background .18s ease,
+    color .18s ease;
+
+
+}
+
+.catalog-page .favorite:hover {
+transform: scale(1.08);
+
+
+background: #173454;
+
+
+}
+
+.catalog-page .favorite:focus-visible {
+outline: 3px solid rgba(96, 165, 250, .35);
+outline-offset: 2px;
+}
+
+.catalog-page .favorite.saved {
+color: #60a5fa;
+}
+
+/* =========================================================
+NENHUM RESULTADO
+========================================================= */
+
+.catalog-page .empty {
+grid-column: 1 / -1;
+
+
+margin: 0;
+padding: 42px 24px;
+
+color: var(--muted);
+
+background: #0b2341;
+border: 1px dashed var(--line);
+border-radius: 12px;
+
+text-align: center;
+
+}
+
+.catalog-page .empty a {
+color: var(--brand);
+font-weight: 700;
+}
+
+/* =========================================================
+MODO CLARO
+========================================================= */
+
+body:not(.dark) .catalog-page .catalog-controls {
+background: #ffffff;
+border-color: #dbe3ec;
+
+
+box-shadow: 0 8px 24px rgba(15, 23, 42, .05);
+
+
+}
+
+body:not(.dark) .catalog-page .search,
+body:not(.dark) .catalog-page #genre-filter {
+background: #f8fafc;
+border-color: #d9e2ec;
+}
+
+body:not(.dark) .catalog-page .search:hover,
+body:not(.dark) .catalog-page #genre-filter:hover {
+border-color: #93b4d8;
+}
+
+body:not(.dark) .catalog-page .book-card {
+background: #ffffff;
+border-color: #d9e2ec;
+
+
+box-shadow: 0 8px 22px rgba(15, 23, 42, .07);
+
+
+}
+
+body:not(.dark) .catalog-page .book-card:hover {
+border-color: #b9cbe0;
+
+
+box-shadow: 0 14px 30px rgba(15, 23, 42, .11);
+
+
+}
+
+body:not(.dark) .catalog-page .tag {
+background: #eff6ff;
+color: #2563eb;
+}
+
+body:not(.dark) .catalog-page .favorite {
+background: #ffffff;
+border-color: #d9e2ec;
+
+
+box-shadow: 0 4px 12px rgba(15, 23, 42, .12);
+
+
+}
+
+body:not(.dark) .catalog-page .favorite:hover {
+background: #eff6ff;
+}
+
+body:not(.dark) .catalog-page .empty {
+background: #ffffff;
+border-color: #cbd5e1;
+}
+
+/* =========================================================
+ALTO CONTRASTE
+========================================================= */
+
+body.high-contrast .catalog-page .book-card,
+body.high-contrast .catalog-page .search,
+body.high-contrast .catalog-page #genre-filter,
+body.high-contrast .catalog-page .empty {
+border-width: 2px;
+}
+
+body.high-contrast .catalog-page .book-card h2,
+body.high-contrast .catalog-page .page-intro h1,
+body.high-contrast .catalog-page .catalog-results-header h2 {
+color: #ffffff;
+}
+
+body:not(.dark).high-contrast .catalog-page .book-card h2,
+body:not(.dark).high-contrast .catalog-page .page-intro h1,
+body:not(.dark).high-contrast .catalog-page .catalog-results-header h2 {
+color: #0f172a;
+}
+
+/* =========================================================
+DESTACAR LINKS
+========================================================= */
+
+body.highlight-links .catalog-page a {
+text-decoration: underline;
+text-underline-offset: 3px;
+}
+
+body.highlight-links .catalog-page .book-card > a {
+text-decoration: none;
+}
+
+body.highlight-links .catalog-page .empty a {
+text-decoration: underline;
+}
+
+/* =========================================================
+REDUZIR MOVIMENTO
+========================================================= */
+
+body.reduce-motion .catalog-page .book-card,
+body.reduce-motion .catalog-page .favorite,
+body.reduce-motion .catalog-page .search,
+body.reduce-motion .catalog-page #genre-filter {
+transition: none;
+}
+
+body.reduce-motion .catalog-page .book-card:hover,
+body.reduce-motion .catalog-page .favorite:hover {
+transform: none;
+}
+
+/* =========================================================
+RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+
+.catalog-page .book-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.catalog-page .book-cover {
+    height: 230px;
+}
+
+
+}
+
+/* =========================================================
+RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+
+.catalog-page .page-intro {
+    padding-top: 38px;
+    padding-bottom: 28px;
+}
+
+.catalog-page .page-intro h1 {
+    font-size: 2rem;
+}
+
+.catalog-page .catalog-controls {
+    grid-template-columns: 1fr;
+}
+
+.catalog-page .book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.catalog-page .book-cover {
+    height: 220px;
+}
+
+.catalog-page .book-card {
+    padding: 9px;
+}
+
+.catalog-page .book-card h2 {
+    font-size: .98rem;
+}
+
+.catalog-page .favorite {
+    top: 16px;
+    right: 16px;
+}
+
+
+}
+
+/* =========================================================
+RESPONSIVIDADE — CELULAR PEQUENO
+========================================================= */
+
+@media (max-width: 400px) {
+
+
+.catalog-page .book-grid {
+    grid-template-columns: 1fr;
+}
+
+.catalog-page .book-cover {
+    height: 250px;
+}
+
+.catalog-page .catalog-results-header h2 {
+    font-size: 1.4rem;
+}
+
+
+}

@@ -1,0 +1,802 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Usuários | BiblioTech</title>
+
+    <link
+        rel="stylesheet"
+        href="site.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admi-usuarios.css"
+    >
+
+    <script
+        src="app.js"
+        defer
+    ></script>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <a
+            class="brand"
+            href="inicio.html"
+        >
+
+            <img
+                src="../site/img/logo_HD.png"
+                alt="BiblioTech"
+            >
+
+            <span>
+                BiblioTech
+            </span>
+
+        </a>
+
+
+        <nav
+            class="primary-nav"
+            aria-label="Navegação principal"
+        >
+
+            <a href="inicio.html">
+                Início
+            </a>
+
+            <a href="livros.html">
+                Acervo
+            </a>
+
+            <a href="favoritos.html">
+                Favoritos
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="suporte.html">
+                Ajuda
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="login.html">
+                Sair
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="page-shell page admin-users-page">
+
+
+        <!-- =================================================
+             CABEÇALHO
+        ================================================== -->
+
+        <section class="admin-users-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    PAINEL ADMINISTRATIVO
+                </p>
+
+                <h1>
+                    Usuários cadastrados
+                </h1>
+
+                <p>
+                    Acompanhe as contas cadastradas e monitore
+                    a utilização da plataforma.
+                </p>
+
+            </div>
+
+
+            <div class="admin-users-badge">
+
+                <span aria-hidden="true">
+                    ◉
+                </span>
+
+                <div>
+
+                    <strong>
+                        Gerenciamento de usuários
+                    </strong>
+
+                    <small>
+                        Controle e acompanhamento
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESUMO
+        ================================================== -->
+
+        <section
+            class="admin-users-stats"
+            aria-label="Resumo dos usuários"
+        >
+
+            <article class="admin-users-stat">
+
+                <div class="admin-users-stat-icon">
+                    #
+                </div>
+
+                <div>
+
+                    <span>
+                        Total de usuários
+                    </span>
+
+                    <strong>
+                        128
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="admin-users-stat">
+
+                <div class="admin-users-stat-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <span>
+                        Contas ativas
+                    </span>
+
+                    <strong>
+                        114
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="admin-users-stat">
+
+                <div class="admin-users-stat-icon">
+                    —
+                </div>
+
+                <div>
+
+                    <span>
+                        Contas inativas
+                    </span>
+
+                    <strong>
+                        14
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="admin-users-stat">
+
+                <div class="admin-users-stat-icon">
+                    ↗
+                </div>
+
+                <div>
+
+                    <span>
+                        Ativos hoje
+                    </span>
+
+                    <strong>
+                        37
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================================
+             ÁREA DE USUÁRIOS
+        ================================================== -->
+
+        <section class="admin-users-card">
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="admin-users-card-header">
+
+                <div>
+
+                    <h2>
+                        Lista de usuários
+                    </h2>
+
+                    <p>
+                        Consulte o estado e a utilização de cada conta.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-users-search">
+
+                    <span aria-hidden="true">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        placeholder="Buscar usuário..."
+                        aria-label="Buscar usuário"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TABELA
+            ================================================== -->
+
+            <div class="admin-users-table-wrapper">
+
+                <table class="admin-users-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Usuário
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Último acesso
+                            </th>
+
+                            <th>
+                                Frequência
+                            </th>
+
+                            <th>
+                                Ações
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- USUÁRIO 1 -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="admin-user">
+
+                                    <div class="admin-user-avatar">
+                                        AS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Ana Silva
+                                        </strong>
+
+                                        <span>
+                                            ana.silva@escola.edu.br
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="admin-user-status active">
+                                    <i></i>
+                                    Ativa
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                Hoje, 14:32
+                            </td>
+
+
+                            <td>
+
+                                <div class="admin-user-frequency">
+
+                                    <strong>
+                                        Alta
+                                    </strong>
+
+                                    <span>
+                                        24 acessos
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="admin-user-delete"
+                                    aria-label="Excluir conta de Ana Silva"
+                                >
+                                    Excluir
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- USUÁRIO 2 -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="admin-user">
+
+                                    <div class="admin-user-avatar">
+                                        JM
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            João Mendes
+                                        </strong>
+
+                                        <span>
+                                            joao.mendes@escola.edu.br
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="admin-user-status active">
+                                    <i></i>
+                                    Ativa
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                Ontem, 19:08
+                            </td>
+
+
+                            <td>
+
+                                <div class="admin-user-frequency">
+
+                                    <strong>
+                                        Média
+                                    </strong>
+
+                                    <span>
+                                        13 acessos
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="admin-user-delete"
+                                    aria-label="Excluir conta de João Mendes"
+                                >
+                                    Excluir
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- USUÁRIO 3 -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="admin-user">
+
+                                    <div class="admin-user-avatar">
+                                        LC
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Lucas Costa
+                                        </strong>
+
+                                        <span>
+                                            lucas.costa@escola.edu.br
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="admin-user-status inactive">
+                                    <i></i>
+                                    Inativa
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                18 ago. 2026
+                            </td>
+
+
+                            <td>
+
+                                <div class="admin-user-frequency">
+
+                                    <strong>
+                                        Baixa
+                                    </strong>
+
+                                    <span>
+                                        3 acessos
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="admin-user-delete"
+                                    aria-label="Excluir conta de Lucas Costa"
+                                >
+                                    Excluir
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- USUÁRIO 4 -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="admin-user">
+
+                                    <div class="admin-user-avatar">
+                                        MR
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Mariana Rocha
+                                        </strong>
+
+                                        <span>
+                                            mariana.rocha@escola.edu.br
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="admin-user-status active">
+                                    <i></i>
+                                    Ativa
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                Hoje, 09:17
+                            </td>
+
+
+                            <td>
+
+                                <div class="admin-user-frequency">
+
+                                    <strong>
+                                        Alta
+                                    </strong>
+
+                                    <span>
+                                        31 acessos
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="admin-user-delete"
+                                    aria-label="Excluir conta de Mariana Rocha"
+                                >
+                                    Excluir
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- USUÁRIO 5 -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="admin-user">
+
+                                    <div class="admin-user-avatar">
+                                        RB
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Rafael Barbosa
+                                        </strong>
+
+                                        <span>
+                                            rafael.barbosa@escola.edu.br
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="admin-user-status inactive">
+                                    <i></i>
+                                    Inativa
+                                </span>
+
+                            </td>
+
+
+                            <td>
+                                02 ago. 2026
+                            </td>
+
+
+                            <td>
+
+                                <div class="admin-user-frequency">
+
+                                    <strong>
+                                        Baixa
+                                    </strong>
+
+                                    <span>
+                                        5 acessos
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="admin-user-delete"
+                                    aria-label="Excluir conta de Rafael Barbosa"
+                                >
+                                    Excluir
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- =================================================
+                 RODAPÉ DA TABELA
+            ================================================== -->
+
+            <div class="admin-users-table-footer">
+
+                <span>
+                    Exibindo 5 usuários de 128
+                </span>
+
+                <div class="admin-users-pagination">
+
+                    <button
+                        type="button"
+                        disabled
+                        aria-label="Página anterior"
+                    >
+                        ←
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button
+                        type="button"
+                        aria-label="Próxima página"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             AVISO
+        ================================================== -->
+
+        <section class="admin-users-notice">
+
+            <span
+                class="admin-users-notice-icon"
+                aria-hidden="true"
+            >
+                !
+            </span>
+
+            <div>
+
+                <strong>
+                    Dados de demonstração
+                </strong>
+
+                <p>
+                    Os usuários exibidos nesta página são apenas
+                    exemplos visuais. As informações reais serão
+                    carregadas posteriormente pelo banco de dados.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <span>
+            © 2026 BiblioTech
+        </span>
+
+        <span>
+            Painel administrativo
+        </span>
+
+    </footer>
+
+</body>
+
+</html>
+

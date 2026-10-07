@@ -1,0 +1,1987 @@
+/* =========================================================
+   BIBLIOTECH
+   cadastro.css
+   Página de Cadastro
+   Visual profissional — Azul / Navy
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+
+    --navy-950: #030b18;
+    --navy-900: #061426;
+    --navy-850: #071a33;
+    --navy-800: #0a2040;
+    --navy-750: #0d294f;
+
+    --blue-700: #2563eb;
+    --blue-600: #3b82f6;
+    --blue-500: #60a5fa;
+    --blue-400: #93c5fd;
+
+    --white: #f8fafc;
+    --text: #e8f1ff;
+    --muted: #91a4bd;
+
+    --line: #1c3554;
+    --line-light: #29496d;
+
+    --success: #60a5fa;
+
+    --shadow:
+        0 25px 70px rgba(0, 8, 25, 0.45);
+
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 12px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(37, 99, 235, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(244, 244, 245, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--navy-950),
+            var(--navy-900) 45%,
+            var(--navy-850)
+        );
+
+    line-height: 1.5;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* =========================================================
+   FUNDO DECORATIVO
+========================================================= */
+
+.background-decoration {
+
+    position: fixed;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(80px);
+
+    opacity: 0.18;
+
+    z-index: -1;
+
+}
+
+
+.background-decoration-one {
+
+    top: -220px;
+    left: -180px;
+
+    background: #2563eb;
+
+}
+
+
+.background-decoration-two {
+
+    right: -220px;
+    bottom: -220px;
+
+    background: #60a5fa;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.site-header {
+
+    width: 100%;
+
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 14px 5%;
+
+    background: rgba(7, 26, 51, 0.92);
+
+    border-bottom: 1px solid rgba(234, 237, 240, 0.12);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+.brand-logo {
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--blue-600),
+        var(--blue-700)
+    );
+
+    box-shadow:
+        0 8px 24px rgba(37, 99, 235, 0.25);
+
+}
+
+
+.brand-logo img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.15;
+
+}
+
+
+.brand-text strong {
+
+    color: var(--white);
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+
+}
+
+
+.brand-text span {
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 0.68rem;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.primary-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+}
+
+
+.primary-nav a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 12px;
+
+    color: var(--muted);
+
+    font-size: 0.84rem;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.primary-nav a i {
+
+    font-size: 0.85rem;
+
+}
+
+
+.primary-nav a:hover {
+
+    color: var(--white);
+
+    background: rgba(59, 130, 246, 0.10);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   BOTÃO ENTRAR
+========================================================= */
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.login-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    color: var(--white);
+
+    background: rgba(59, 130, 246, 0.12);
+
+    border: 1px solid rgba(96, 165, 250, 0.25);
+
+    border-radius: 11px;
+
+    font-size: 0.84rem;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.login-button:hover {
+
+    background: var(--blue-600);
+
+    border-color: var(--blue-600);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.register-page {
+
+    width: 100%;
+
+    padding: 55px 5% 65px;
+
+}
+
+
+.register-container {
+
+    width: min(1120px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(480px, 1.1fr);
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   LADO ESQUERDO
+========================================================= */
+
+.register-info {
+
+    padding: 25px 0;
+
+}
+
+
+.info-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    margin-bottom: 24px;
+
+    color: var(--blue-400);
+
+    background: rgba(59, 130, 246, 0.10);
+
+    border: 1px solid rgba(96, 165, 250, 0.20);
+
+    border-radius: 999px;
+
+    font-size: 0.74rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+
+}
+
+
+.info-badge i {
+
+    color: var(--blue-500);
+
+}
+
+
+.register-info h1 {
+
+    max-width: 510px;
+
+    color: var(--white);
+
+    font-size: clamp(2.4rem, 4vw, 4rem);
+
+    line-height: 1.04;
+
+    letter-spacing: -0.055em;
+
+    font-weight: 800;
+
+}
+
+
+.register-info h1 span {
+
+    display: block;
+
+    color: var(--blue-500);
+
+}
+
+
+.register-info > p {
+
+    max-width: 500px;
+
+    margin-top: 22px;
+
+    color: var(--muted);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   BENEFÍCIOS
+========================================================= */
+
+.benefits {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 38px;
+
+}
+
+
+.benefit {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+}
+
+
+.benefit-icon {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--blue-400);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(59, 130, 246, 0.16),
+            rgba(37, 99, 235, 0.08)
+        );
+
+    border: 1px solid rgba(96, 165, 250, 0.14);
+
+    border-radius: 12px;
+
+}
+
+
+.benefit > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.benefit strong {
+
+    color: var(--white);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+}
+
+
+.benefit span {
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   CARD DO FORMULÁRIO
+========================================================= */
+
+.register-card {
+
+    padding: 34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(13, 41, 79, 0.97),
+            rgba(6, 20, 38, 0.98)
+        );
+
+    border: 1px solid rgba(96, 165, 250, 0.17);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.register-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--blue-600),
+            var(--blue-400),
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   CABEÇALHO DO FORMULÁRIO
+========================================================= */
+
+.form-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.form-icon {
+
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-600),
+            var(--blue-700)
+        );
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.25);
+
+}
+
+
+.eyebrow {
+
+    margin-bottom: 3px;
+
+    color: var(--blue-400);
+
+    font-size: 0.66rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+.form-header h2 {
+
+    color: var(--white);
+
+    font-size: 1.45rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.025em;
+
+}
+
+
+.form-header > div:last-child > p:last-child {
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 0.77rem;
+
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.register-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.form-group > label {
+
+    color: #dbeafe;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+}
+
+
+.input-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.input-wrapper > i {
+
+    position: absolute;
+
+    left: 15px;
+
+    color: #6482a5;
+
+    font-size: 0.88rem;
+
+    pointer-events: none;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.input-wrapper input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding:
+        0 46px
+        0 42px;
+
+    color: var(--white);
+
+    background: rgba(3, 11, 24, 0.48);
+
+    border: 1px solid var(--line);
+
+    border-radius: var(--radius-sm);
+
+    outline: none;
+
+    font-size: 0.82rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #526a87;
+
+}
+
+
+.input-wrapper input:hover {
+
+    border-color: var(--line-light);
+
+}
+
+
+.input-wrapper input:focus {
+
+    background: rgba(3, 11, 24, 0.65);
+
+    border-color: var(--blue-600);
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.12);
+
+}
+
+
+.input-wrapper:focus-within > i {
+
+    color: var(--blue-400);
+
+}
+
+
+/* =========================================================
+   MOSTRAR SENHA
+========================================================= */
+
+.password-toggle {
+
+    position: absolute;
+
+    right: 7px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #6d85a2;
+
+    background: transparent;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.password-toggle:hover {
+
+    color: var(--blue-400);
+
+    background: rgba(59, 130, 246, 0.10);
+
+}
+
+
+/* =========================================================
+   FORÇA DA SENHA
+========================================================= */
+
+.password-strength {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.strength-bars {
+
+    flex: 1;
+
+    max-width: 150px;
+
+    display: flex;
+
+    gap: 4px;
+
+}
+
+
+.strength-bars span {
+
+    height: 4px;
+
+    flex: 1;
+
+    border-radius: 999px;
+
+    background: #1d344f;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.strength-bars span.active {
+
+    background: var(--blue-500);
+
+}
+
+
+.password-strength small {
+
+    color: #7187a1;
+
+    font-size: 0.67rem;
+
+}
+
+
+/* =========================================================
+   TIPOS DE CONTA
+========================================================= */
+
+.account-types {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+.account-option {
+
+    display: block;
+
+    cursor: pointer;
+
+}
+
+
+.account-option > input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.account-option-content {
+
+    min-height: 76px;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: rgba(3, 11, 24, 0.42);
+
+    border: 1px solid var(--line);
+
+    border-radius: var(--radius-sm);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.account-option:hover .account-option-content {
+
+    border-color: var(--line-light);
+
+    transform: translateY(-1px);
+
+}
+
+
+.account-option > input:checked + .account-option-content {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(59, 130, 246, 0.14),
+            rgba(37, 99, 235, 0.06)
+        );
+
+    border-color: var(--blue-600);
+
+    box-shadow:
+        0 0 0 2px rgba(59, 130, 246, 0.08);
+
+}
+
+
+.account-option-icon {
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--blue-400);
+
+    background: rgba(59, 130, 246, 0.10);
+
+    border-radius: 10px;
+
+}
+
+
+.account-option-content > div:nth-child(2) {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.account-option strong {
+
+    color: var(--white);
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+}
+
+
+.account-option span {
+
+    color: #7187a1;
+
+    font-size: 0.63rem;
+
+    line-height: 1.3;
+
+}
+
+
+.check-icon {
+
+    margin-left: auto;
+
+    color: transparent;
+
+    font-size: 0.72rem;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.account-option > input:checked + .account-option-content .check-icon {
+
+    color: var(--blue-500);
+
+}
+
+
+/* =========================================================
+   INFORMAÇÃO ADMINISTRATIVA
+========================================================= */
+
+.field-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #7187a1;
+
+    font-size: 0.66rem;
+
+    line-height: 1.5;
+
+}
+
+
+.field-info i {
+
+    color: var(--blue-500);
+
+}
+
+
+/* =========================================================
+   TERMOS
+========================================================= */
+
+.terms {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    color: #8195ad;
+
+    font-size: 0.69rem;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+
+}
+
+
+.terms input {
+
+    width: 15px;
+    height: 15px;
+
+    margin-top: 1px;
+
+    flex-shrink: 0;
+
+    accent-color: var(--blue-600);
+
+    cursor: pointer;
+
+}
+
+
+.terms a {
+
+    color: var(--blue-400);
+
+    font-weight: 600;
+
+}
+
+
+.terms a:hover {
+
+    color: var(--blue-500);
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   BOTÃO CADASTRO
+========================================================= */
+
+.register-button {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 2px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-600),
+            var(--blue-700)
+        );
+
+    border: 0;
+
+    border-radius: var(--radius-sm);
+
+    box-shadow:
+        0 10px 28px rgba(37, 99, 235, 0.22);
+
+    cursor: pointer;
+
+    font-size: 0.84rem;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+
+}
+
+
+.register-button i {
+
+    transition: transform 0.2s ease;
+
+}
+
+
+.register-button:hover {
+
+    filter: brightness(1.08);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 32px rgba(37, 99, 235, 0.30);
+
+}
+
+
+.register-button:hover i {
+
+    transform: translateX(4px);
+
+}
+
+
+.register-button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-note {
+
+    text-align: center;
+
+    color: #7187a1;
+
+    font-size: 0.72rem;
+
+}
+
+
+.text-link {
+
+    margin-left: 3px;
+
+    color: var(--blue-400);
+
+    font-weight: 700;
+
+}
+
+
+.text-link:hover {
+
+    color: var(--blue-500);
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.site-footer {
+
+    min-height: 70px;
+
+    padding: 18px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    color: #607894;
+
+    background: rgba(3, 11, 24, 0.55);
+
+    border-top: 1px solid rgba(96, 165, 250, 0.08);
+
+    font-size: 0.68rem;
+
+}
+
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #8ea7c5;
+
+}
+
+
+.footer-brand i {
+
+    color: var(--blue-500);
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+
+    outline: 2px solid var(--blue-400);
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .site-header {
+
+        gap: 15px;
+
+    }
+
+
+    .primary-nav a span {
+
+        display: none;
+
+    }
+
+
+    .primary-nav a {
+
+        width: 38px;
+        height: 38px;
+
+        justify-content: center;
+
+        padding: 0;
+
+    }
+
+
+    .register-container {
+
+        grid-template-columns:
+            minmax(0, 0.85fr)
+            minmax(430px, 1.15fr);
+
+        gap: 35px;
+
+    }
+
+
+    .register-info h1 {
+
+        font-size: 2.8rem;
+
+    }
+
+}
+
+
+@media (max-width: 820px) {
+
+    .register-page {
+
+        padding-top: 35px;
+
+    }
+
+
+    .register-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 620px;
+
+    }
+
+
+    .register-info {
+
+        text-align: center;
+
+        padding: 0;
+
+    }
+
+
+    .register-info > p {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+
+    .benefits {
+
+        max-width: 480px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+
+    }
+
+
+    .register-info h1 span {
+
+        display: inline;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .site-header {
+
+        padding: 12px 20px;
+
+    }
+
+
+    .brand-text {
+
+        display: none;
+
+    }
+
+
+    .primary-nav {
+
+        gap: 2px;
+
+    }
+
+
+    .login-button {
+
+        padding: 9px 11px;
+
+    }
+
+
+    .login-button i {
+
+        display: none;
+
+    }
+
+
+    .register-page {
+
+        padding: 30px 18px 45px;
+
+    }
+
+
+    .register-card {
+
+        padding: 24px 20px;
+
+        border-radius: 19px;
+
+    }
+
+
+    .register-info h1 {
+
+        font-size: 2.25rem;
+
+    }
+
+
+    .account-types {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .site-footer {
+
+        flex-wrap: wrap;
+
+        gap: 8px 15px;
+
+        text-align: center;
+
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .primary-nav a {
+
+        width: 32px;
+        height: 32px;
+
+    }
+
+
+    .primary-nav a i {
+
+        font-size: 0.75rem;
+
+    }
+
+
+    .header-actions {
+
+        display: none;
+
+    }
+
+
+    .register-info h1 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .form-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .form-icon {
+
+        width: 46px;
+        height: 46px;
+
+    }
+
+
+    .form-header h2 {
+
+        font-size: 1.25rem;
+
+    }
+
+
+    .password-strength {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+    .strength-bars {
+
+        width: 100%;
+
+        max-width: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   BIBLIOTECH — CADASTRO
+   MODO CLARO
+========================================================= */
+
+body:not(.dark) {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(219, 234, 254, .9),
+            transparent 28rem
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(191, 219, 254, .55),
+            transparent 30rem
+        ),
+        #f5f8fc;
+
+    color: #172033;
+}
+
+
+/* =========================================================
+   CABEÇALHO — MODO CLARO
+========================================================= */
+
+body:not(.dark) .site-header {
+    background: rgba(255, 255, 255, .94);
+    border-bottom-color: #dbe3ec;
+    box-shadow: 0 1px 15px rgba(15, 23, 42, .06);
+}
+
+body:not(.dark) .brand-text strong {
+    color: #172033;
+}
+
+body:not(.dark) .brand-text span {
+    color: #64748b;
+}
+
+body:not(.dark) .primary-nav a {
+    color: #64748b;
+}
+
+body:not(.dark) .primary-nav a:hover,
+body:not(.dark) .primary-nav a.active {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL — MODO CLARO
+========================================================= */
+
+body:not(.dark) .register-container {
+    background: transparent;
+}
+
+
+/* =========================================================
+   LADO INFORMATIVO
+========================================================= */
+
+body:not(.dark) .register-info h1 {
+    color: #172033;
+}
+
+body:not(.dark) .register-info h1 span {
+    color: #2563eb;
+}
+
+body:not(.dark) .register-info > p {
+    color: #64748b;
+}
+
+body:not(.dark) .info-badge {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #2563eb;
+}
+
+body:not(.dark) .benefit strong {
+    color: #172033;
+}
+
+body:not(.dark) .benefit span {
+    color: #64748b;
+}
+
+body:not(.dark) .benefit-icon {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   CARD DO FORMULÁRIO
+========================================================= */
+
+body:not(.dark) .register-card {
+    background: #ffffff;
+    border-color: #dbe3ec;
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, .09),
+        0 4px 12px rgba(15, 23, 42, .04);
+}
+
+body:not(.dark) .form-header h2 {
+    color: #172033;
+}
+
+body:not(.dark) .form-header > div > p:last-child {
+    color: #64748b;
+}
+
+body:not(.dark) .form-icon {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+body:not(.dark) .form-group > label {
+    color: #172033;
+}
+
+body:not(.dark) .input-wrapper {
+    background: #f8fafc;
+    border-color: #d5dee9;
+}
+
+body:not(.dark) .input-wrapper:focus-within {
+    background: #ffffff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .12);
+}
+
+body:not(.dark) .input-wrapper i {
+    color: #64748b;
+}
+
+body:not(.dark) .input-wrapper input {
+    color: #172033;
+}
+
+body:not(.dark) .input-wrapper input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   TIPOS DE CONTA
+========================================================= */
+
+body:not(.dark) .account-option-content {
+    background: #f8fafc;
+    border-color: #d5dee9;
+}
+
+body:not(.dark) .account-option-content strong {
+    color: #172033;
+}
+
+body:not(.dark) .account-option-content span {
+    color: #64748b;
+}
+
+body:not(.dark) .account-option-icon {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+body:not(.dark) .account-option input:checked + .account-option-content {
+    background: #eff6ff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, .08);
+}
+
+body:not(.dark) .check-icon {
+    color: #2563eb;
+}
+
+body:not(.dark) .field-info {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   SENHA
+========================================================= */
+
+body:not(.dark) .password-strength small {
+    color: #64748b;
+}
+
+body:not(.dark) .strength-bars span {
+    background: #dbe3ec;
+}
+
+
+/* =========================================================
+   TERMOS
+========================================================= */
+
+body:not(.dark) .terms {
+    color: #64748b;
+}
+
+body:not(.dark) .terms a {
+    color: #2563eb;
+}
+
+body:not(.dark) .terms a:hover {
+    color: #1d4ed8;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+body:not(.dark) .login-note {
+    color: #64748b;
+}
+
+body:not(.dark) .text-link {
+    color: #2563eb;
+}
+
+body:not(.dark) .text-link:hover {
+    color: #1d4ed8;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+body:not(.dark) .site-footer {
+    background: #ffffff;
+    border-top-color: #dbe3ec;
+    color: #64748b;
+}
+
+body:not(.dark) .footer-brand {
+    color: #172033;
+}
+
+
+/* =========================================================
+   MODO ESCURO
+   Mantém a identidade atual
+========================================================= */
+
+body.dark {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(30, 64, 175, .18),
+            transparent 28rem
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(30, 58, 138, .12),
+            transparent 30rem
+        ),
+        #040e1d;
+}
+
+body.dark .register-card {
+    background: #081b34;
+    border-color: #203b5e;
+}
+
+body.dark .input-wrapper {
+    background: #06172b;
+    border-color: #203b5e;
+}
+
+body.dark .account-option-content {
+    background: #06172b;
+    border-color: #203b5e;
+}
+
+body.dark .account-option input:checked + .account-option-content {
+    background: #0d2b4d;
+    border-color: #3b82f6;
+}
+

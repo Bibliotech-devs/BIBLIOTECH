@@ -1,0 +1,422 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Perfil | BiblioTech</title>
+
+    <link
+        rel="stylesheet"
+        href="site.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="perfil.css"
+    >
+
+    <script
+        src="app.js"
+        defer
+    ></script>
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+    <a
+        class="brand"
+        href="inicio.html"
+    >
+        <img
+            src="../site/img/logo_HD.png"
+            alt="BiblioTech"
+        >
+
+        <span>BiblioTech</span>
+    </a>
+
+
+    <nav
+        class="primary-nav"
+        aria-label="Navegação principal"
+    >
+
+        <a href="inicio.html">
+            Início
+        </a>
+
+        <a href="livros.html">
+            Acervo
+        </a>
+
+        <a href="favoritos.html">
+            Favoritos
+        </a>
+
+          <a href="perfil.html">Perfil</a>
+
+        <a href="sobre.html">
+            Sobre
+        </a>
+
+        <a href="suporte.html">
+            Ajuda
+        </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <a href="login.html">
+            Entrar
+        </a>
+
+        <a
+            class="button button-small"
+            href="cadastro.html"
+        >
+            Criar conta
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="page-shell page profile-page">
+
+    <!-- =====================================================
+         CABEÇALHO DO PERFIL
+    ====================================================== -->
+
+    <section class="profile-header">
+
+        <div class="profile-avatar">
+            <span>BT</span>
+        </div>
+
+
+        <div class="profile-header-content">
+
+            <p class="eyebrow">
+                SUA CONTA
+            </p>
+
+            <h1>
+                Perfil do leitor
+            </h1>
+
+            <p>
+                Gerencie suas informações pessoais
+                e personalize sua experiência no BiblioTech.
+            </p>
+
+        </div>
+
+
+        <div class="profile-status">
+
+            <span class="profile-status-dot"></span>
+
+            <span>
+                Conta ativa
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <div class="profile-content">
+
+
+        <!-- =================================================
+             INFORMAÇÕES PESSOAIS
+        ================================================== -->
+
+        <section class="profile-card profile-main-card">
+
+            <div class="profile-card-header">
+
+                <div class="profile-card-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <h2>
+                        Informações pessoais
+                    </h2>
+
+                    <p>
+                        Mantenha seus dados atualizados.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="profile-form"
+                data-static-form
+                data-message="Alterações salvas apenas neste navegador."
+            >
+
+
+                <div class="profile-field">
+
+                    <label for="profile-name">
+                        Nome
+                    </label>
+
+                    <input
+                        id="profile-name"
+                        type="text"
+                        value="Leitor BiblioTech"
+                        autocomplete="name"
+                    >
+
+                </div>
+
+
+                <div class="profile-field">
+
+                    <label for="profile-email">
+                        E-mail
+                    </label>
+
+                    <input
+                        id="profile-email"
+                        type="email"
+                        value="leitor@escola.edu.br"
+                        autocomplete="email"
+                    >
+
+                </div>
+
+
+                <div class="profile-field">
+
+                    <label for="profile-bio">
+                        Biografia
+                    </label>
+
+                    <textarea
+                        id="profile-bio"
+                        placeholder="Conte um pouco sobre suas leituras favoritas."
+                    ></textarea>
+
+                    <small>
+                        Compartilhe seus interesses literários
+                        e os tipos de livros que você gosta.
+                    </small>
+
+                </div>
+
+
+                <div class="profile-form-footer">
+
+                    <a
+                        class="profile-settings-link"
+                        href="configura.html"
+                    >
+                        ⚙ Preferências de leitura
+                    </a>
+
+
+                    <button
+                        type="submit"
+                        class="button profile-save-button"
+                    >
+                        Salvar alterações
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- =================================================
+             RESUMO DA CONTA
+        ================================================== -->
+
+        <aside class="profile-card profile-summary">
+
+            <div class="profile-card-header">
+
+                <div class="profile-card-icon">
+                    📚
+                </div>
+
+                <div>
+
+                    <h2>
+                        Minha conta
+                    </h2>
+
+                    <p>
+                        Visão geral do seu perfil.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-summary-list">
+
+
+                <div class="profile-summary-item">
+
+                    <div class="profile-summary-icon">
+                        📖
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Biblioteca digital
+                        </strong>
+
+                        <span>
+                            Acesso ao acervo
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-summary-item">
+
+                    <div class="profile-summary-icon">
+                        ♥
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Favoritos
+                        </strong>
+
+                        <span>
+                            Seus livros salvos
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-summary-item">
+
+                    <div class="profile-summary-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Preferências
+                        </strong>
+
+                        <span>
+                            Personalização do site
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <a
+                class="profile-preferences"
+                href="configura.html"
+            >
+
+                <span>
+                    Personalizar experiência
+                </span>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+            
+            <a
+                class="profile-preferences"
+                href="add-livros.html"
+            >
+
+                <span>
+                    Adicione Livros
+                </span>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+            <a
+                class="profile-preferences"
+                href="admi-usuarios.html"
+            >
+
+                <span>
+                    Administração de Usuarios
+                </span>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <span>
+        © 2026 BiblioTech
+    </span>
+
+    <span>
+        Seu perfil, do seu jeito.
+    </span>
+
+</footer>
+
+</body>
+</html>
+
